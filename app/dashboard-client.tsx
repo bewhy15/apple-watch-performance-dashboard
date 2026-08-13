@@ -136,7 +136,7 @@ function TeamRankingTable({ kind, rows, sourceRows }: { kind: "rm" | "am"; rows:
       <div className="table-wrap" role="region" aria-label={`ตารางอันดับ ${kind.toUpperCase()}`}>
         <table className="team-table">
           <caption className="sr-only">อันดับ {kind.toUpperCase()} เปรียบเทียบ Target ยอดขาย Forecast MoM และ YoY</caption>
-          <thead><tr><th scope="col">อันดับ</th><th scope="col">{kind.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">% Target</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
+          <thead><tr><th scope="col">อันดับ</th><th scope="col">{kind.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">%AC</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
           <tbody>{rows.map((row, index) => {
             const attainment = row.target_attainment ?? 0;
             const memberText = kind === "rm"
@@ -364,7 +364,7 @@ export function DashboardClient() {
         <div className="table-wrap" id="performance-table" role="tabpanel" tabIndex={0} aria-label={title}>
           <table>
             <caption className="sr-only">{title} เปรียบเทียบเป้าหมาย ยอดขาย MoM และ YoY</caption>
-            <thead><tr><th scope="col">#</th><th scope="col">{view === "stores" ? "ร้านค้า" : view.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">% Target</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">ต้องทำอีก</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
+            <thead><tr><th scope="col">#</th><th scope="col">{view === "stores" ? "ร้านค้า" : view.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">%AC</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">ต้องทำอีก</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
             <tbody>{visible.map((row, index) => {
               const attainment = row.target_attainment ?? 0;
               return <tr key={row.store_id}>
@@ -383,7 +383,7 @@ export function DashboardClient() {
           </table>
         </div>
       </section></> : <section className="teams-report">
-        <div className="teams-report-head"><div><p>RM &amp; AM PERFORMANCE</p><h1>ภาพรวม RM และ AM</h1></div><span>เรียงตาม % Target สูงสุด · ข้อมูลถึง {dateLabel(dataThroughDate)}</span></div>
+        <div className="teams-report-head"><div><p>RM &amp; AM PERFORMANCE</p><h1>ภาพรวม RM และ AM</h1></div><span>เรียงตาม %AC สูงสุด · ข้อมูลถึง {dateLabel(dataThroughDate)}</span></div>
         <TeamRankingTable kind="rm" rows={rmRanking} sourceRows={filtered} />
         <TeamRankingTable kind="am" rows={amRanking} sourceRows={filtered} />
       </section>}
