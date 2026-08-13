@@ -1,0 +1,198 @@
+target_month,store_id,store_name,rm,am,target
+2026-08-01,138,ID138 : Studio 7-Central-Pattaya,วีรานุวัติ,คฑาวุฒิ,3064806.0
+2026-08-01,344,ID344 : Studio 7-Tukcom-Pattaya,วีรานุวัติ,คฑาวุฒิ,187227.0
+2026-08-01,452,ID452 : Studio 7-Robinson-Prachinburi,วีรานุวัติ,คฑาวุฒิ,484598.0
+2026-08-01,661,ID661 : Studio 7-Robinson-Chachoengsao,วีรานุวัติ,คฑาวุฒิ,920676.0
+2026-08-01,748,ID748 : Studio 7-Terminal21-Pattaya,วีรานุวัติ,คฑาวุฒิ,1993676.0
+2026-08-01,1195,ID1195 : Studio7-Lotus-Aranyaprathet-Sakaeo,วีรานุวัติ,คฑาวุฒิ,104885.0
+2026-08-01,1768,ID1768 : Studio 7-Big C-Mueang-Sakaeo,วีรานุวัติ,คฑาวุฒิ,147803.0
+2026-08-01,2585,ID2585 : Studio 7-Big C-Aranyaprathet-Sakaeo,วีรานุวัติ,คฑาวุฒิ,49414.0
+2026-08-01,2742,ID2742 : Studio7-Lotus-Bangpakong,วีรานุวัติ,คฑาวุฒิ,145556.0
+2026-08-01,2824,ID2824 : Studio7-STA-Lotus Srimahaphot-Prachinburi,วีรานุวัติ,คฑาวุฒิ,203143.0
+2026-08-01,2907,ID2907 : Studio7-STA-Bigc-Chachoengsao,วีรานุวัติ,คฑาวุฒิ,229346.0
+2026-08-01,3039,ID3039 : Studio7-Big C Pattaya3-Chonburi,วีรานุวัติ,คฑาวุฒิ,234226.0
+2026-08-01,109,ID109 : Studio 7-The Mall-Bangkae,กังสดาล,จักรกฤษณ์,1411188.0
+2026-08-01,134,ID134 : Studio 7-Crystal Park-Ladprao,กังสดาล,จักรกฤษณ์,166585.0
+2026-08-01,315,ID315 : Studio 7-Seacon Square-Bangkae,กังสดาล,จักรกฤษณ์,301068.0
+2026-08-01,362,ID362 : Studio 7-The Mall-Thapra,กังสดาล,จักรกฤษณ์,628716.0
+2026-08-01,651,ID651 : Studio 7-Robinson-Srisaman,กังสดาล,จักรกฤษณ์,382926.0
+2026-08-01,708,ID708 : Studio7(Ustore)-SPU-Sripatum,กังสดาล,จักรกฤษณ์,10284.0
+2026-08-01,709,ID709 : Studio7(Ustore)-UTCC-Horkarnkathai,กังสดาล,จักรกฤษณ์,0.0
+2026-08-01,859,ID859 : Studio7(Ustore)-Major Hollywood-Ramkhamhaeng,กังสดาล,จักรกฤษณ์,52165.0
+2026-08-01,1103,ID1103 : Studio 7-Terminal21-Rama3,กังสดาล,จักรกฤษณ์,233888.0
+2026-08-01,1623,ID1623 : Studio 7-Lotus(Ratchapruek)-Pakkret-Nonthaburi,กังสดาล,จักรกฤษณ์,81805.0
+2026-08-01,1780,ID1780 : Studio 7-Robinson (Ratchapruk)-Pakkret-Nonthaburi,กังสดาล,จักรกฤษณ์,523815.0
+2026-08-01,2373,ID2373 : Studio 7-BNN Park Ratchaphruek-Nonthaburi,กังสดาล,จักรกฤษณ์,49449.0
+2026-08-01,2506,ID2506 : BB-The Mall-Thapra (ปิด 07/69),กังสดาล,จักรกฤษณ์,0.0
+2026-08-01,2530,ID2530 : Studio7-Big C Extra Ratchadaphisek,กังสดาล,จักรกฤษณ์,331324.0
+2026-08-01,3015,ID3015 : Studio7-Central Northville-Nonthaburi,กังสดาล,จักรกฤษณ์,303213.0
+2026-08-01,233,ID233 : Studio 7-Market Village-Huahin,กังสดาล,จิดานันท์,669662.0
+2026-08-01,255,ID255 : Studio 7-Big C-Nakhonpathom,กังสดาล,จิดานันท์,276169.0
+2026-08-01,286,ID286 : Studio 7-Big C-Phetchaburi,กังสดาล,จิดานันท์,159636.0
+2026-08-01,369,ID369 : Studio 7-Robinson-Kanchanaburi,กังสดาล,จิดานันท์,539548.0
+2026-08-01,498,ID498 : Studio 7-Central-Salaya,กังสดาล,จิดานันท์,1023571.0
+2026-08-01,660,ID660 : Studio 7-Robinson-Ratchaburi,กังสดาล,จิดานันท์,408963.0
+2026-08-01,684,ID684 : Studio 7-Blueport-Huahin,กังสดาล,จิดานันท์,174007.0
+2026-08-01,695,ID695 : Studio 7-Robinson-Phetchaburi,กังสดาล,จิดานันท์,364877.0
+2026-08-01,706,ID706 : Studio7(Ustore)-KMUTT-Bangmod,กังสดาล,จิดานันท์,26229.0
+2026-08-01,2634,ID2634 : Studio7-Lotus-Ratchaburi,กังสดาล,จิดานันท์,165999.0
+2026-08-01,2716,ID2716 : Studio7-Lotus  Pranburi,กังสดาล,จิดานันท์,82531.0
+2026-08-01,2727,ID2727 : Studio7-Big C-Mahachai,กังสดาล,จิดานันท์,69403.0
+2026-08-01,2757,ID2757 : Studio7-STA Cha Am-Phetchaburi,กังสดาล,จิดานันท์,85489.0
+2026-08-01,2783,ID2783 : Studio7-Big C Suksawat,กังสดาล,จิดานันท์,226255.0
+2026-08-01,3038,ID3038 : Studio7-Big C-Samut Songkhram,กังสดาล,จิดานันท์,103663.0
+2026-08-01,3042,ID3042 : Studio7-STA-Bangpong-Ratchaburi,กังสดาล,จิดานันท์,26685.0
+2026-08-01,103,ID103 : Studio 7-Paradise Park-Srinakarin,วีรานุวัติ,จีรวรรณ,275959.0
+2026-08-01,242,ID242 : Studio 7-Passion-Rayong,วีรานุวัติ,จีรวรรณ,778653.0
+2026-08-01,308,ID308 : Studio 7-Pacific Park-Siracha-Chonburi,วีรานุวัติ,จีรวรรณ,527533.0
+2026-08-01,321,ID321 : Studio 7-Central-Chonburi,วีรานุวัติ,จีรวรรณ,1436968.0
+2026-08-01,484,ID484 : Studio 7-Robinson-Samutprakan,วีรานุวัติ,จีรวรรณ,479288.0
+2026-08-01,544,ID544 : Studio 7(P)-Lotus-Trat,วีรานุวัติ,จีรวรรณ,327112.0
+2026-08-01,545,ID545 : Studio 7(P)-Lotus-Chanthaburi,วีรานุวัติ,จีรวรรณ,253601.0
+2026-08-01,705,ID705 : Studio7(Ustore)-KMITL-Ladkrabang,วีรานุวัติ,จีรวรรณ,106736.0
+2026-08-01,754,ID754 : Studio 7-Robinson-Chonburi,วีรานุวัติ,จีรวรรณ,540698.0
+2026-08-01,780,ID780 : Studio 7-Lotus-Amatanakorn,วีรานุวัติ,จีรวรรณ,328244.0
+2026-08-01,1069,ID1069 : Studio 7-Robinson-Ladkrabang,วีรานุวัติ,จีรวรรณ,449501.0
+2026-08-01,1620,ID1620 : Studio 7-Robinson-Banchang-Rayong,วีรานุวัติ,จีรวรรณ,400692.0
+2026-08-01,2445,ID2445 : Studio 7-Lotus-Srinakarin,วีรานุวัติ,จีรวรรณ,274845.0
+2026-08-01,2799,ID2799 : Studio7-Lotus Bowin,วีรานุวัติ,จีรวรรณ,375068.0
+2026-08-01,2838,ID2838 : Studio7-Lotus-Banbueng-Chonburi,วีรานุวัติ,จีรวรรณ,305359.0
+2026-08-01,2858,ID2858 : Studio7-Robinson-Chanthaburi,วีรานุวัติ,จีรวรรณ,160154.0
+2026-08-01,2860,ID2860 : Studio7-Big C-Sattahip,วีรานุวัติ,จีรวรรณ,258912.0
+2026-08-01,2987,ID2987 : Studio7-STA-Lotus Go Fresh-Pluakdaeng-Rayong,วีรานุวัติ,จีรวรรณ,235105.0
+2026-08-01,112,ID112 : Studio 7-Central-Bangna,ธรรญ์ภิสิษฐ์,จุฑารัตน์,1054172.0
+2026-08-01,197,ID197 : Studio 7-K Village-Sukhumvit,ธรรญ์ภิสิษฐ์,จุฑารัตน์,106319.0
+2026-08-01,647,ID647 : Studio 7-Central-East Vile,ธรรญ์ภิสิษฐ์,จุฑารัตน์,1230048.0
+2026-08-01,1071,ID1071 : Studio7(Ustore)-CU-Chulalongkorn2,ธรรญ์ภิสิษฐ์,จุฑารัตน์,8199.0
+2026-08-01,1086,ID1086 : Studio 7-MBK-Rama 1,ธรรญ์ภิสิษฐ์,จุฑารัตน์,681710.0
+2026-08-01,2441,ID2441 : Studio 7-Market Village-Suvarnaphumi,ธรรญ์ภิสิษฐ์,จุฑารัตน์,346552.0
+2026-08-01,2465,ID2465 : Studio 7-Imperial-Samrong,ธรรญ์ภิสิษฐ์,จุฑารัตน์,411431.0
+2026-08-01,2615,ID2615 : Studio7-Big C-Bangplee,ธรรญ์ภิสิษฐ์,จุฑารัตน์,192538.0
+2026-08-01,2633,ID2633 : Studio7-Lotus Sukhumvit50,ธรรญ์ภิสิษฐ์,จุฑารัตน์,289209.0
+2026-08-01,3067,ID3067 : Studio7-Lotus-Bangna,ธรรญ์ภิสิษฐ์,จุฑารัตน์,204578.0
+2026-08-01,243,ID243 : Studio 7-Zeer-Rangsit-Pathum Thani,ธรรญ์ภิสิษฐ์,ธนเดช,241292.0
+2026-08-01,249,ID249 : Studio 7-Ayutthaya Park-Ayutthaya,ธรรญ์ภิสิษฐ์,ธนเดช,781132.0
+2026-08-01,272,ID272 : Studio 7-Robinson-Suphanburi,ธรรญ์ภิสิษฐ์,ธนเดช,974024.0
+2026-08-01,273,ID273 : Studio 7-Big C-Lopburi,ธรรญ์ภิสิษฐ์,ธนเดช,329959.0
+2026-08-01,298,ID298 : Studio 7-Robinson-Saraburi,ธรรญ์ภิสิษฐ์,ธนเดช,946405.0
+2026-08-01,387,ID387 : Studio 7-Lotus-Navanakorn,ธรรญ์ภิสิษฐ์,ธนเดช,376974.0
+2026-08-01,686,ID686 : Studio 7-Robinson-Lopburi,ธรรญ์ภิสิษฐ์,ธนเดช,527928.0
+2026-08-01,707,ID707 : Studio7(Ustore)-RSU-Rangsit,ธรรญ์ภิสิษฐ์,ธนเดช,21511.0
+2026-08-01,1196,ID1196 : Studio 7-Central-Mueang-Ayutthaya,ธรรญ์ภิสิษฐ์,ธนเดช,974536.0
+2026-08-01,2685,ID2685 : Studio7-STA-Makro-Lotus Chainat,ธรรญ์ภิสิษฐ์,ธนเดช,151208.0
+2026-08-01,2686,ID2686 : Studio7-Lotus-Saraburi,ธรรญ์ภิสิษฐ์,ธนเดช,318318.0
+2026-08-01,2785,ID2785 : Studio7-Big C-Angthong,ธรรญ์ภิสิษฐ์,ธนเดช,89428.0
+2026-08-01,2919,ID2919 : Studio7-STA-Lotus-Nakhonnayok,ธรรญ์ภิสิษฐ์,ธนเดช,327709.0
+2026-08-01,2957,ID2957 : Studio7-Big C-Lamlukka 1,ธรรญ์ภิสิษฐ์,ธนเดช,197060.0
+2026-08-01,2986,ID2986 : Studio7-STA-Sing Buri,ธรรญ์ภิสิษฐ์,ธนเดช,98127.0
+2026-08-01,3135,ID3135 : Studio7-Market Village-Rangsit Klong 4,ธรรญ์ภิสิษฐ์,ธนเดช,0.0
+2026-08-01,215,ID215 : Studio 7-The Mall-Korat,ธรรญ์ภิสิษฐ์,น้ำทิพย์,1288926.0
+2026-08-01,565,ID565 : Studio7(Ustore)-UBU-Ubon Ratchathani,ธรรญ์ภิสิษฐ์,น้ำทิพย์,0.0
+2026-08-01,666,ID666 : Studio 7-Big C-Sisaket,ธรรญ์ภิสิษฐ์,น้ำทิพย์,314870.0
+2026-08-01,674,ID674 : Studio 7-Robinson-Surin,ธรรญ์ภิสิษฐ์,น้ำทิพย์,221303.0
+2026-08-01,675,ID675 : Studio 7-Robinson-Roiet,ธรรญ์ภิสิษฐ์,น้ำทิพย์,495406.0
+2026-08-01,691,ID691 : Studio 7-Robinson-Buriram,ธรรญ์ภิสิษฐ์,น้ำทิพย์,413479.0
+2026-08-01,741,ID741 : Studio 7-Taweekit-Buriram,ธรรญ์ภิสิษฐ์,น้ำทิพย์,331188.0
+2026-08-01,1558,ID1558 : Studio7(Ustore)-NRRU-Muang-Nakhonratchasima,ธรรญ์ภิสิษฐ์,น้ำทิพย์,7255.0
+2026-08-01,2359,ID2359 : Studio 7-Robinson-Chaiyaphum,ธรรญ์ภิสิษฐ์,น้ำทิพย์,167881.0
+2026-08-01,2680,ID2680 : Studio7-Big C-Ubon Ratchathani,ธรรญ์ภิสิษฐ์,น้ำทิพย์,102214.0
+2026-08-01,2684,ID2684 : Studio 7-Big C-Roiet,ธรรญ์ภิสิษฐ์,น้ำทิพย์,41476.0
+2026-08-01,2755,ID2755 : Studio7-Lotus-Nang Rong-Buriram,ธรรญ์ภิสิษฐ์,น้ำทิพย์,191625.0
+2026-08-01,2758,ID2758 : Studio7-STA(Saveone)-Korat,ธรรญ์ภิสิษฐ์,น้ำทิพย์,105864.0
+2026-08-01,2879,ID2879 : Studio7-STA-Lotus Lamnarai-Lopburi,ธรรญ์ภิสิษฐ์,น้ำทิพย์,95904.0
+2026-08-01,2881,ID2881 : Studio7-Big C -Mueang-Amnatcharoen,ธรรญ์ภิสิษฐ์,น้ำทิพย์,137192.0
+2026-08-01,2920,ID2920 : Studio7-STA-Lotus Sikhio-Nakhonratchasima,ธรรญ์ภิสิษฐ์,น้ำทิพย์,46359.0
+2026-08-01,2926,ID2926 : Studio7-STA-Pak Chong-Nakhon Ratchasima,ธรรญ์ภิสิษฐ์,น้ำทิพย์,155768.0
+2026-08-01,206,ID206 : Studio 7-Central-Phuket,กังสดาล,ประวิชญา,3212302.0
+2026-08-01,256,ID256 : Studio 7-Lotus-Samui,กังสดาล,ประวิชญา,353536.0
+2026-08-01,310,ID310 : Studio 7-Central-Samui,กังสดาล,ประวิชญา,1055620.0
+2026-08-01,313,ID313 : Studio 7-Jungceylon-Phuket,กังสดาล,ประวิชญา,1532839.0
+2026-08-01,329,ID329 : Studio 7-Central-Suratthani,กังสดาล,ประวิชญา,1595971.0
+2026-08-01,340,ID340 : Studio 7-Lotus-Krabi,กังสดาล,ประวิชญา,355500.0
+2026-08-01,341,ID341 : Studio 7-Lotus-Phuket,กังสดาล,ประวิชญา,443699.0
+2026-08-01,1106,ID1106 : Studio 7-Robinson-Thalang-Phuket,กังสดาล,ประวิชญา,417479.0
+2026-08-01,1113,ID1113 : Studio 7-Big C-Suratthani,กังสดาล,ประวิชญา,242329.0
+2026-08-01,1785,ID1785 : Studio 7-Lotus-Mueang-Chumphon,กังสดาล,ประวิชญา,383626.0
+2026-08-01,2744,ID2744 : Studio7-Lotus-Thalang,กังสดาล,ประวิชญา,270270.0
+2026-08-01,2909,ID2909 : Studio7-Big C-Phuket,กังสดาล,ประวิชญา,102342.0
+2026-08-01,2925,ID2925 : Studio7-Lotus-Langsuan,กังสดาล,ประวิชญา,101675.0
+2026-08-01,2935,ID2935 : Studio7-Big C-Phang Nga,กังสดาล,ประวิชญา,102717.0
+2026-08-01,3025,ID3025 : Studio7-Lotus Chalong,กังสดาล,ประวิชญา,87660.0
+2026-08-01,3147,ID3147 : Studio7-Takuapa Square-Phangnga,กังสดาล,ประวิชญา,70000.0
+2026-08-01,493,ID493 : B-Play-Terminal21-Pattaya,มนตรี,ปาหนัน,0.0
+2026-08-01,2819,ID2819 : BB-Central-Chonburi,มนตรี,ปาหนัน,0.0
+2026-08-01,1060,ID1060 : BB-Emquartier-Sukhumvit,มนตรี,พิมพ์ณดา,0.0
+2026-08-01,1479,ID1479 : BB-Central (Westgate)-Bangyai-Nonthaburi,มนตรี,พิมพ์ณดา,0.0
+2026-08-01,2273,ID2273 : BB-Emsphere-Khlongtoei-Bangkok,มนตรี,พิมพ์ณดา,0.0
+2026-08-01,106,ID106 : Studio 7-Central-Rama2,ชัยชนะ,พีรวัส,2011561.0
+2026-08-01,114,ID114 : Studio 7-Central-Ladprao,ชัยชนะ,พีรวัส,3784946.0
+2026-08-01,115,ID115 : Studio 7-Future Park-Rangsit,ชัยชนะ,พีรวัส,3828007.0
+2026-08-01,118,ID118 : Studio 7-The Mall Bangkapi,ชัยชนะ,พีรวัส,1623265.0
+2026-08-01,251,ID251 : Studio 7-Mega-Bangna,ชัยชนะ,พีรวัส,3901836.0
+2026-08-01,335,ID335 : Studio 7-Central-Pinklao,ชัยชนะ,พีรวัส,2055661.0
+2026-08-01,627,ID627 : Studio 7-Emquartier-Sukhumvit,ชัยชนะ,พีรวัส,1018865.0
+2026-08-01,645,ID645 : Studio 7-Central-Westgate,ชัยชนะ,พีรวัส,3257383.0
+2026-08-01,1999,ID1999 : Studio 7-Emsphere-Khlongtoei-Bangkok,ชัยชนะ,พีรวัส,345371.0
+2026-08-01,2717,ID2717 : Studio7-Central Dusit,ชัยชนะ,พีรวัส,809103.0
+2026-08-01,292,ID292 : Studio 7-Central-Chiangmai Festival,วีรานุวัติ,พีระศักดิ์,2549577.0
+2026-08-01,410,ID410 : Studio 7-Central-Chiangmai Airport,วีรานุวัติ,พีระศักดิ์,951133.0
+2026-08-01,414,ID414 : Studio 7-Central-Lampang,วีรานุวัติ,พีระศักดิ์,654689.0
+2026-08-01,417,ID417 : Studio7(Ustore)-CMU-Chiangmai,วีรานุวัติ,พีระศักดิ์,51376.0
+2026-08-01,422,ID422 : Studio 7-STA-Mae Sai,วีรานุวัติ,พีระศักดิ์,174314.0
+2026-08-01,844,ID844 : Studio7-MAYA-Chiangmai,วีรานุวัติ,พีระศักดิ์,573856.0
+2026-08-01,865,ID865 : Studio7(Ustore)-CMU-Suandokpark-Chiangmai,วีรานุวัติ,พีระศักดิ์,58473.0
+2026-08-01,1179,ID1179 : Studio7(Ustore)-CRRU-Chiang Rai,วีรานุวัติ,พีระศักดิ์,29800.0
+2026-08-01,2614,ID2614 : Studio7-Big C-Lamphun,วีรานุวัติ,พีระศักดิ์,426909.0
+2026-08-01,2647,ID2647 : Studio7-STA-Think Park-Chiangmai,วีรานุวัติ,พีระศักดิ์,190795.0
+2026-08-01,2722,ID2722 : Studio 7-Big C-Chiang Rai 2,วีรานุวัติ,พีระศักดิ์,320616.0
+2026-08-01,2743,ID2743 : Studio7-Lotus-Phayao,วีรานุวัติ,พีระศักดิ์,137524.0
+2026-08-01,2779,ID2779 : Studio7-STA-7-11(19324)-Thetsaban Soi18 Maesai,วีรานุวัติ,พีระศักดิ์,98828.0
+2026-08-01,2843,ID2843 : Studio7-Lotus Fang-Chiangmai,วีรานุวัติ,พีระศักดิ์,97678.0
+2026-08-01,2868,ID2868 : Studio 7-STA-Lotus Saraphi-Chiangmai,วีรานุวัติ,พีระศักดิ์,152763.0
+2026-08-01,2880,ID2880 : Studio7-Lotus-Maesai-Chiang Rai,วีรานุวัติ,พีระศักดิ์,120363.0
+2026-08-01,2906,ID2906 : Studio7-Big C-Hangdong-Chiangmai,วีรานุวัติ,พีระศักดิ์,127718.0
+2026-08-01,105,ID105 : Studio 7-Central-Khonkaen,ธรรญ์ภิสิษฐ์,วรรณวนัส,1242967.0
+2026-08-01,253,ID253 : Studio 7-IT Big Jieng-Nongkhai,ธรรญ์ภิสิษฐ์,วรรณวนัส,382287.0
+2026-08-01,260,ID260 : Studio7(Ustore)-KKU-Khonkaen,ธรรญ์ภิสิษฐ์,วรรณวนัส,36022.0
+2026-08-01,337,ID337 : Studio 7-Central-Udonthani,ธรรญ์ภิสิษฐ์,วรรณวนัส,2056165.0
+2026-08-01,368,ID368 : Studio 7-Robinson-Sakonnakhon,ธรรญ์ภิสิษฐ์,วรรณวนัส,517846.0
+2026-08-01,377,ID377 : Studio 7-Sermthai-Mueang-Mahasarakham,ธรรญ์ภิสิษฐ์,วรรณวนัส,401467.0
+2026-08-01,655,ID655 : Studio 7-Big C-Nakhon Phanom,ธรรญ์ภิสิษฐ์,วรรณวนัส,249738.0
+2026-08-01,656,ID656 : Studio 7-Robinson-Mukdahan,ธรรญ์ภิสิษฐ์,วรรณวนัส,430528.0
+2026-08-01,673,ID673 : Studio 7-Big C-Kalasin,ธรรญ์ภิสิษฐ์,วรรณวนัส,171583.0
+2026-08-01,1345,ID1345 : Studio 7-Big C-Nongkhai,ธรรญ์ภิสิษฐ์,วรรณวนัส,198994.0
+2026-08-01,1559,ID1559 : Studio7(Ustore)-UDRU-Muang-Udonthani,ธรรญ์ภิสิษฐ์,วรรณวนัส,28766.0
+2026-08-01,1621,ID1621 : Studio 7-Lotus Extra-Mueang-Khonkaen,ธรรญ์ภิสิษฐ์,วรรณวนัส,158210.0
+2026-08-01,2318,ID2318 : Studio7(Ustore)-KKU R.2-Khonkaen,ธรรญ์ภิสิษฐ์,วรรณวนัส,95187.0
+2026-08-01,2501,ID2501 : Studio 7-Big C-Loei,ธรรญ์ภิสิษฐ์,วรรณวนัส,320603.0
+2026-08-01,2715,ID2715 : Studio7-Lotus-Bueng Kan,ธรรญ์ภิสิษฐ์,วรรณวนัส,201567.0
+2026-08-01,2797,ID2797 : Studio7-Lotus Chumphae-Khonkaen,ธรรญ์ภิสิษฐ์,วรรณวนัส,200876.0
+2026-08-01,3003,ID3003 : Studio7-Lotus-Mueang-Udonthani,ธรรญ์ภิสิษฐ์,วรรณวนัส,335816.0
+2026-08-01,305,ID305 : Studio 7-Coliseum-Phatthalung,กังสดาล,วัชราภรณ์,315093.0
+2026-08-01,543,ID543 : Studio 7(P)-Central-Nakhonsithammarat,กังสดาล,วัชราภรณ์,1043335.0
+2026-08-01,632,ID632 : Studio 7-Lotus-Songkhla,กังสดาล,วัชราภรณ์,479793.0
+2026-08-01,633,ID633 : Studio 7-Central -Hatyai,กังสดาล,วัชราภรณ์,2442079.0
+2026-08-01,676,ID676 : Studio 7-Sahathai-Thungsong,กังสดาล,วัชราภรณ์,581114.0
+2026-08-01,1110,ID1110 : Studio7-Big C Yala,กังสดาล,วัชราภรณ์,251891.0
+2026-08-01,1563,ID1563 : Studio 7-Big C-Narathiwat,กังสดาล,วัชราภรณ์,388011.0
+2026-08-01,1567,ID1567 : Studio7(Ustore)-TSU-Muang-Songkhla,กังสดาล,วัชราภรณ์,52617.0
+2026-08-01,1616,ID1616 : Studio 7-Coliseum-Mueang-Yala,กังสดาล,วัชราภรณ์,366488.0
+2026-08-01,2553,ID2553 : Studio7-Lotus-Yala,กังสดาล,วัชราภรณ์,242115.0
+2026-08-01,2618,ID2618 : Studio7-STA (Hatyai Village)-Hatyai-Songkhla,กังสดาล,วัชราภรณ์,433184.0
+2026-08-01,2678,ID2678 : Studio7-STA-Pattani Bazaar,กังสดาล,วัชราภรณ์,230624.0
+2026-08-01,2713,ID2713 : Studio7-Sahathai Nakhonsithammarat,กังสดาล,วัชราภรณ์,171261.0
+2026-08-01,2762,ID2762 : Studio7-Big C-Trang,กังสดาล,วัชราภรณ์,64124.0
+2026-08-01,2974,ID2974 : Studio7-Big C-Hatyai,กังสดาล,วัชราภรณ์,184746.0
+2026-08-01,246,ID246 : Studio 7-Central-Phitsanulok,วีรานุวัติ,สมยศ,1311888.0
+2026-08-01,282,ID282 : Studio 7-Big C-Kamphaengphet,วีรานุวัติ,สมยศ,225268.0
+2026-08-01,389,ID389 : Studio 7-Lotus-Phitsanulok,วีรานุวัติ,สมยศ,197638.0
+2026-08-01,412,ID412 : Studio 7-Big C-Tak,วีรานุวัติ,สมยศ,110162.0
+2026-08-01,413,ID413 : Studio 7-V-Square-Nakhonsawan,วีรานุวัติ,สมยศ,492270.0
+2026-08-01,420,ID420 : Studio 7-MarkFour-Phrae,วีรานุวัติ,สมยศ,250164.0
+2026-08-01,586,ID586 : Studio 7-Lotus-Phetchabun,วีรานุวัติ,สมยศ,194427.0
+2026-08-01,653,ID653 : Studio 7-Robinson-Maesod,วีรานุวัติ,สมยศ,847783.0
+2026-08-01,1484,ID1484 : Studio 7(P)-Mueang-Uttaradit,วีรานุวัติ,สมยศ,72484.0
+2026-08-01,1812,ID1812 : Studio 7-Big C-Mueang-Nan,วีรานุวัติ,สมยศ,188237.0
+2026-08-01,2466,ID2466 : Studio 7-Lotus-Uttaradit,วีรานุวัติ,สมยศ,425211.0
+2026-08-01,2522,ID2522 : Studio7-Big C-Mueang-Sukhothai,วีรานุวัติ,สมยศ,245209.0
+2026-08-01,2800,ID2800 : Studio7-Big C-Phitsanulok,วีรานุวัติ,สมยศ,199833.0
