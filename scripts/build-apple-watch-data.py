@@ -29,8 +29,12 @@ def clean_name(value, store_id):
     return re.sub(rf"^ID{re.escape(store_id)}\s*:\s*", "", str(value).strip(), flags=re.I)
 
 
-def main(source_path, output_dir):
+def main(source_path, output_dir, comparisons_path=None):
     source = json.loads(Path(source_path).read_text(encoding="utf-8"))
+    if comparisons_path:
+        comparisons = json.loads(Path(comparisons_path).read_text(encoding="utf-8"))
+        source["previous"] = comparisons["previous"]
+        source["lastYear"] = comparisons["lastYear"]
     target_rows = source["target"][1:]
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -72,8 +76,13 @@ def main(source_path, output_dir):
             "currentPeriodType": "MTD",
             "previousMonth": "2026-07-01",
             "lastYearMonth": "2025-08-01",
+            "comparisonWindows": {
+                "current": {"from": "2026-08-01", "through": "2026-08-12"},
+                "previous": {"from": "2026-07-01", "through": "2026-07-12"},
+                "lastYear": {"from": "2025-08-01", "through": "2025-08-12"},
+            },
             "targetRule": "latest month in Target tab only",
-            "comparisonNote": "Current sales are MTD through 2026-08-12; previous month and last-year aggregates use their selected source periods.",
+            "comparisonNote": "Fair MTD comparison: current 1-12 Aug 2026, previous 1-12 Jul 2026, and last year 1-12 Aug 2025.",
             "storeCount": len(stores),
             "rmCount": len({row["rm"] for row in stores}),
             "amCount": len({row["am"] for row in stores}),
@@ -85,14 +94,14 @@ def main(source_path, output_dir):
     )
 
     with (output / "aw_store_targets.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(["target_month", "store_id", "store_name", "rm", "am", "target"])
         writer.writerows([
             "2026-08-01", row["storeId"], row["sourceStoreName"], row["rm"], row["am"], row["target"]
         ] for row in stores)
 
     with (output / "aw_monthly_sales.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(["source_set", "sales_month", "store_id", "sales"])
         for key, (source_set, sales_month) in PERIODS.items():
             for store_id, sales in sorted(sales_maps[key].items(), key=lambda pair: int(pair[0])):
@@ -100,6 +109,6 @@ def main(source_path, output_dir):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        raise SystemExit("usage: build-apple-watch-data.py SOURCE_JSON OUTPUT_DIR")
-    main(sys.argv[1], sys.argv[2])
+    if len(sys.argv) not in (3, 4):
+        raise SystemExit("usage: build-apple-watch-data.py SOURCE_JSON OUTPUT_DIR [MTD_COMPARISONS_JSON]")
+    main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) == 4 else None)

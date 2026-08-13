@@ -7,8 +7,22 @@
     "currentPeriodType": "MTD",
     "previousMonth": "2026-07-01",
     "lastYearMonth": "2025-08-01",
+    "comparisonWindows": {
+      "current": {
+        "from": "2026-08-01",
+        "through": "2026-08-12"
+      },
+      "previous": {
+        "from": "2026-07-01",
+        "through": "2026-07-12"
+      },
+      "lastYear": {
+        "from": "2025-08-01",
+        "through": "2025-08-12"
+      }
+    },
     "targetRule": "latest month in Target tab only",
-    "comparisonNote": "Current sales are MTD through 2026-08-12; previous month and last-year aggregates use their selected source periods.",
+    "comparisonNote": "Fair MTD comparison: current 1-12 Aug 2026, previous 1-12 Jul 2026, and last year 1-12 Aug 2025.",
     "storeCount": 197,
     "rmCount": 5,
     "amCount": 15
@@ -23,11 +37,11 @@
       "am": "คฑาวุฒิ",
       "target": 3064806.0,
       "currentSales": 1071184.0,
-      "previousMonthSales": 3526853.0,
-      "lastYearSales": 2623990.0,
+      "previousMonthSales": 1509050.0,
+      "lastYearSales": 1080840.0,
       "targetAchievement": 0.349511,
-      "momGrowth": -0.696278,
-      "yoyGrowth": -0.591773
+      "momGrowth": -0.29016,
+      "yoyGrowth": -0.008934
     },
     {
       "storeId": "344",
@@ -38,11 +52,11 @@
       "am": "คฑาวุฒิ",
       "target": 187227.0,
       "currentSales": 96680.0,
-      "previousMonthSales": 213280.0,
-      "lastYearSales": 209450.0,
+      "previousMonthSales": 117250.0,
+      "lastYearSales": 125950.0,
       "targetAchievement": 0.516379,
-      "momGrowth": -0.546699,
-      "yoyGrowth": -0.53841
+      "momGrowth": -0.175437,
+      "yoyGrowth": -0.232394
     },
     {
       "storeId": "452",
@@ -53,11 +67,11 @@
       "am": "คฑาวุฒิ",
       "target": 484598.0,
       "currentSales": 230675.0,
-      "previousMonthSales": 552030.0,
-      "lastYearSales": 470900.0,
+      "previousMonthSales": 266220.0,
+      "lastYearSales": 269250.0,
       "targetAchievement": 0.476013,
-      "momGrowth": -0.582133,
-      "yoyGrowth": -0.51014
+      "momGrowth": -0.133517,
+      "yoyGrowth": -0.143268
     },
     {
       "storeId": "661",
@@ -68,11 +82,11 @@
       "am": "คฑาวุฒิ",
       "target": 920676.0,
       "currentSales": 320015.0,
-      "previousMonthSales": 1070236.0,
-      "lastYearSales": 1093299.0,
+      "previousMonthSales": 481360.0,
+      "lastYearSales": 564149.0,
       "targetAchievement": 0.347587,
-      "momGrowth": -0.700987,
-      "yoyGrowth": -0.707294
+      "momGrowth": -0.335186,
+      "yoyGrowth": -0.432747
     },
     {
       "storeId": "748",
@@ -83,11 +97,11 @@
       "am": "คฑาวุฒิ",
       "target": 1993676.0,
       "currentSales": 956030.0,
-      "previousMonthSales": 2319200.0,
-      "lastYearSales": 1553965.0,
+      "previousMonthSales": 818310.0,
+      "lastYearSales": 581725.0,
       "targetAchievement": 0.479531,
-      "momGrowth": -0.587776,
-      "yoyGrowth": -0.38478
+      "momGrowth": 0.168298,
+      "yoyGrowth": 0.64344
     },
     {
       "storeId": "1195",
@@ -98,11 +112,11 @@
       "am": "คฑาวุฒิ",
       "target": 104885.0,
       "currentSales": 60980.0,
-      "previousMonthSales": 119480.0,
-      "lastYearSales": 108200.0,
+      "previousMonthSales": 77090.0,
+      "lastYearSales": 77400.0,
       "targetAchievement": 0.581399,
-      "momGrowth": -0.489622,
-      "yoyGrowth": -0.436414
+      "momGrowth": -0.208977,
+      "yoyGrowth": -0.212145
     },
     {
       "storeId": "1768",
@@ -113,11 +127,11 @@
       "am": "คฑาวุฒิ",
       "target": 147803.0,
       "currentSales": 30490.0,
-      "previousMonthSales": 168370.0,
-      "lastYearSales": 205800.0,
+      "previousMonthSales": 66400.0,
+      "lastYearSales": 120450.0,
       "targetAchievement": 0.206288,
-      "momGrowth": -0.818911,
-      "yoyGrowth": -0.851846
+      "momGrowth": -0.540813,
+      "yoyGrowth": -0.746866
     },
     {
       "storeId": "2585",
@@ -128,11 +142,11 @@
       "am": "คฑาวุฒิ",
       "target": 49414.0,
       "currentSales": 7690.0,
-      "previousMonthSales": 56290.0,
-      "lastYearSales": 89400.0,
+      "previousMonthSales": 32490.0,
+      "lastYearSales": 22900.0,
       "targetAchievement": 0.155624,
-      "momGrowth": -0.863386,
-      "yoyGrowth": -0.913982
+      "momGrowth": -0.763312,
+      "yoyGrowth": -0.664192
     },
     {
       "storeId": "2742",
@@ -143,11 +157,11 @@
       "am": "คฑาวุฒิ",
       "target": 145556.0,
       "currentSales": 85300.0,
-      "previousMonthSales": 165810.0,
-      "lastYearSales": 121400.0,
+      "previousMonthSales": 75130.0,
+      "lastYearSales": 67700.0,
       "targetAchievement": 0.586029,
-      "momGrowth": -0.485556,
-      "yoyGrowth": -0.297364
+      "momGrowth": 0.135365,
+      "yoyGrowth": 0.25997
     },
     {
       "storeId": "2824",
@@ -158,10 +172,10 @@
       "am": "คฑาวุฒิ",
       "target": 203143.0,
       "currentSales": 56790.0,
-      "previousMonthSales": 255460.0,
+      "previousMonthSales": 162180.0,
       "lastYearSales": 0,
       "targetAchievement": 0.279557,
-      "momGrowth": -0.777695,
+      "momGrowth": -0.649834,
       "yoyGrowth": null
     },
     {
@@ -173,10 +187,10 @@
       "am": "คฑาวุฒิ",
       "target": 229346.0,
       "currentSales": 22800.0,
-      "previousMonthSales": 261260.0,
+      "previousMonthSales": 141530.0,
       "lastYearSales": 0,
       "targetAchievement": 0.099413,
-      "momGrowth": -0.912731,
+      "momGrowth": -0.838903,
       "yoyGrowth": null
     },
     {
@@ -188,10 +202,10 @@
       "am": "คฑาวุฒิ",
       "target": 234226.0,
       "currentSales": 98890.0,
-      "previousMonthSales": 266820.0,
+      "previousMonthSales": 117790.0,
       "lastYearSales": 0,
       "targetAchievement": 0.422199,
-      "momGrowth": -0.629376,
+      "momGrowth": -0.160455,
       "yoyGrowth": null
     },
     {
@@ -203,11 +217,11 @@
       "am": "จักรกฤษณ์",
       "target": 1411188.0,
       "currentSales": 834368.0,
-      "previousMonthSales": 1704606.0,
-      "lastYearSales": 1513691.0,
+      "previousMonthSales": 741003.0,
+      "lastYearSales": 700201.0,
       "targetAchievement": 0.591252,
-      "momGrowth": -0.510521,
-      "yoyGrowth": -0.448786
+      "momGrowth": 0.125998,
+      "yoyGrowth": 0.191612
     },
     {
       "storeId": "134",
@@ -218,11 +232,11 @@
       "am": "จักรกฤษณ์",
       "target": 166585.0,
       "currentSales": 65440.0,
-      "previousMonthSales": 214390.0,
-      "lastYearSales": 217100.0,
+      "previousMonthSales": 162100.0,
+      "lastYearSales": 81100.0,
       "targetAchievement": 0.392832,
-      "momGrowth": -0.694762,
-      "yoyGrowth": -0.698572
+      "momGrowth": -0.596299,
+      "yoyGrowth": -0.193095
     },
     {
       "storeId": "315",
@@ -233,11 +247,11 @@
       "am": "จักรกฤษณ์",
       "target": 301068.0,
       "currentSales": 175250.0,
-      "previousMonthSales": 366800.0,
-      "lastYearSales": 492490.0,
+      "previousMonthSales": 233440.0,
+      "lastYearSales": 267600.0,
       "targetAchievement": 0.582094,
-      "momGrowth": -0.522219,
-      "yoyGrowth": -0.644155
+      "momGrowth": -0.249272,
+      "yoyGrowth": -0.345105
     },
     {
       "storeId": "362",
@@ -248,11 +262,11 @@
       "am": "จักรกฤษณ์",
       "target": 628716.0,
       "currentSales": 236993.0,
-      "previousMonthSales": 757979.5,
-      "lastYearSales": 645446.0,
+      "previousMonthSales": 341130.0,
+      "lastYearSales": 263948.0,
       "targetAchievement": 0.376948,
-      "momGrowth": -0.687336,
-      "yoyGrowth": -0.632823
+      "momGrowth": -0.305271,
+      "yoyGrowth": -0.102122
     },
     {
       "storeId": "651",
@@ -263,11 +277,11 @@
       "am": "จักรกฤษณ์",
       "target": 382926.0,
       "currentSales": 66460.0,
-      "previousMonthSales": 466530.0,
-      "lastYearSales": 146975.0,
+      "previousMonthSales": 184670.0,
+      "lastYearSales": 74525.0,
       "targetAchievement": 0.173558,
-      "momGrowth": -0.857544,
-      "yoyGrowth": -0.547814
+      "momGrowth": -0.640115,
+      "yoyGrowth": -0.108219
     },
     {
       "storeId": "708",
@@ -278,11 +292,11 @@
       "am": "จักรกฤษณ์",
       "target": 10284.0,
       "currentSales": 0,
-      "previousMonthSales": 10900.0,
-      "lastYearSales": 8900.0,
+      "previousMonthSales": 0,
+      "lastYearSales": 0,
       "targetAchievement": 0.0,
-      "momGrowth": -1.0,
-      "yoyGrowth": -1.0
+      "momGrowth": null,
+      "yoyGrowth": null
     },
     {
       "storeId": "709",
@@ -308,10 +322,10 @@
       "am": "จักรกฤษณ์",
       "target": 52165.0,
       "currentSales": 42640.0,
-      "previousMonthSales": 62803.0,
+      "previousMonthSales": 43390.0,
       "lastYearSales": 0,
       "targetAchievement": 0.817406,
-      "momGrowth": -0.321052,
+      "momGrowth": -0.017285,
       "yoyGrowth": null
     },
     {
@@ -323,11 +337,11 @@
       "am": "จักรกฤษณ์",
       "target": 233888.0,
       "currentSales": 123230.0,
-      "previousMonthSales": 278001.02,
-      "lastYearSales": 279750.0,
+      "previousMonthSales": 110040.0,
+      "lastYearSales": 105000.0,
       "targetAchievement": 0.526876,
-      "momGrowth": -0.556728,
-      "yoyGrowth": -0.5595
+      "momGrowth": 0.119866,
+      "yoyGrowth": 0.173619
     },
     {
       "storeId": "1623",
@@ -338,11 +352,11 @@
       "am": "จักรกฤษณ์",
       "target": 81805.0,
       "currentSales": 10900.0,
-      "previousMonthSales": 93470.0,
-      "lastYearSales": 21100.0,
+      "previousMonthSales": 51080.0,
+      "lastYearSales": 0,
       "targetAchievement": 0.133244,
-      "momGrowth": -0.883385,
-      "yoyGrowth": -0.483412
+      "momGrowth": -0.786609,
+      "yoyGrowth": null
     },
     {
       "storeId": "1780",
@@ -353,11 +367,11 @@
       "am": "จักรกฤษณ์",
       "target": 523815.0,
       "currentSales": 117642.0,
-      "previousMonthSales": 626370.0,
-      "lastYearSales": 317300.0,
+      "previousMonthSales": 236750.0,
+      "lastYearSales": 166650.0,
       "targetAchievement": 0.224587,
-      "momGrowth": -0.812184,
-      "yoyGrowth": -0.62924
+      "momGrowth": -0.503096,
+      "yoyGrowth": -0.294077
     },
     {
       "storeId": "2373",
@@ -368,11 +382,11 @@
       "am": "จักรกฤษณ์",
       "target": 49449.0,
       "currentSales": 37180.0,
-      "previousMonthSales": 56500.0,
-      "lastYearSales": 80949.08,
+      "previousMonthSales": 0,
+      "lastYearSales": 44649.08,
       "targetAchievement": 0.751886,
-      "momGrowth": -0.341947,
-      "yoyGrowth": -0.540699
+      "momGrowth": null,
+      "yoyGrowth": -0.167284
     },
     {
       "storeId": "2506",
@@ -398,11 +412,11 @@
       "am": "จักรกฤษณ์",
       "target": 331324.0,
       "currentSales": 64190.0,
-      "previousMonthSales": 389470.0,
-      "lastYearSales": 116600.0,
+      "previousMonthSales": 219100.0,
+      "lastYearSales": 44000.0,
       "targetAchievement": 0.193738,
-      "momGrowth": -0.835186,
-      "yoyGrowth": -0.449485
+      "momGrowth": -0.707029,
+      "yoyGrowth": 0.458864
     },
     {
       "storeId": "3015",
@@ -413,10 +427,10 @@
       "am": "จักรกฤษณ์",
       "target": 303213.0,
       "currentSales": 77570.0,
-      "previousMonthSales": 346450.0,
+      "previousMonthSales": 117690.0,
       "lastYearSales": 0,
       "targetAchievement": 0.255827,
-      "momGrowth": -0.7761,
+      "momGrowth": -0.340896,
       "yoyGrowth": null
     },
     {
@@ -428,11 +442,11 @@
       "am": "จิดานันท์",
       "target": 669662.0,
       "currentSales": 385829.0,
-      "previousMonthSales": 765154.0,
-      "lastYearSales": 666880.0,
+      "previousMonthSales": 317740.0,
+      "lastYearSales": 233800.0,
       "targetAchievement": 0.576155,
-      "momGrowth": -0.49575,
-      "yoyGrowth": -0.421442
+      "momGrowth": 0.214292,
+      "yoyGrowth": 0.650252
     },
     {
       "storeId": "255",
@@ -443,11 +457,11 @@
       "am": "จิดานันท์",
       "target": 276169.0,
       "currentSales": 130590.0,
-      "previousMonthSales": 363273.0,
-      "lastYearSales": 359300.0,
+      "previousMonthSales": 192900.0,
+      "lastYearSales": 137050.0,
       "targetAchievement": 0.472863,
-      "momGrowth": -0.640518,
-      "yoyGrowth": -0.636543
+      "momGrowth": -0.323017,
+      "yoyGrowth": -0.047136
     },
     {
       "storeId": "286",
@@ -458,11 +472,11 @@
       "am": "จิดานันท์",
       "target": 159636.0,
       "currentSales": 28490.0,
-      "previousMonthSales": 182400.0,
-      "lastYearSales": 136325.0,
+      "previousMonthSales": 66090.0,
+      "lastYearSales": 52500.0,
       "targetAchievement": 0.178469,
-      "momGrowth": -0.843805,
-      "yoyGrowth": -0.791014
+      "momGrowth": -0.568921,
+      "yoyGrowth": -0.457333
     },
     {
       "storeId": "369",
@@ -473,11 +487,11 @@
       "am": "จิดานันท์",
       "target": 539548.0,
       "currentSales": 219595.25,
-      "previousMonthSales": 623436.33,
-      "lastYearSales": 680996.88,
+      "previousMonthSales": 292090.29,
+      "lastYearSales": 225796.88,
       "targetAchievement": 0.406999,
-      "momGrowth": -0.647766,
-      "yoyGrowth": -0.677539
+      "momGrowth": -0.248194,
+      "yoyGrowth": -0.027466
     },
     {
       "storeId": "498",
@@ -488,11 +502,11 @@
       "am": "จิดานันท์",
       "target": 1023571.0,
       "currentSales": 433550.0,
-      "previousMonthSales": 1198751.5,
-      "lastYearSales": 1195350.0,
+      "previousMonthSales": 530690.0,
+      "lastYearSales": 578200.0,
       "targetAchievement": 0.423566,
-      "momGrowth": -0.638332,
-      "yoyGrowth": -0.637303
+      "momGrowth": -0.183045,
+      "yoyGrowth": -0.250173
     },
     {
       "storeId": "660",
@@ -503,11 +517,11 @@
       "am": "จิดานันท์",
       "target": 408963.0,
       "currentSales": 250900.0,
-      "previousMonthSales": 488739.5,
-      "lastYearSales": 495250.0,
+      "previousMonthSales": 113929.5,
+      "lastYearSales": 139150.0,
       "targetAchievement": 0.613503,
-      "momGrowth": -0.486639,
-      "yoyGrowth": -0.493387
+      "momGrowth": 1.202239,
+      "yoyGrowth": 0.80309
     },
     {
       "storeId": "684",
@@ -518,11 +532,11 @@
       "am": "จิดานันท์",
       "target": 174007.0,
       "currentSales": 88130.0,
-      "previousMonthSales": 198820.0,
-      "lastYearSales": 164050.0,
+      "previousMonthSales": 68670.0,
+      "lastYearSales": 70000.0,
       "targetAchievement": 0.506474,
-      "momGrowth": -0.556735,
-      "yoyGrowth": -0.462786
+      "momGrowth": 0.283384,
+      "yoyGrowth": 0.259
     },
     {
       "storeId": "695",
@@ -533,11 +547,11 @@
       "am": "จิดานันท์",
       "target": 364877.0,
       "currentSales": 107005.0,
-      "previousMonthSales": 416908.0,
-      "lastYearSales": 355996.0,
+      "previousMonthSales": 171560.0,
+      "lastYearSales": 204748.0,
       "targetAchievement": 0.293263,
-      "momGrowth": -0.743337,
-      "yoyGrowth": -0.699421
+      "momGrowth": -0.376282,
+      "yoyGrowth": -0.477382
     },
     {
       "storeId": "706",
@@ -548,11 +562,11 @@
       "am": "จิดานันท์",
       "target": 26229.0,
       "currentSales": 11900.0,
-      "previousMonthSales": 27800.0,
-      "lastYearSales": 54500.0,
+      "previousMonthSales": 15900.0,
+      "lastYearSales": 42550.0,
       "targetAchievement": 0.453696,
-      "momGrowth": -0.571942,
-      "yoyGrowth": -0.781651
+      "momGrowth": -0.251572,
+      "yoyGrowth": -0.720329
     },
     {
       "storeId": "2634",
@@ -563,11 +577,11 @@
       "am": "จิดานันท์",
       "target": 165999.0,
       "currentSales": 48080.0,
-      "previousMonthSales": 189670.0,
-      "lastYearSales": 119900.0,
+      "previousMonthSales": 87990.0,
+      "lastYearSales": 52500.0,
       "targetAchievement": 0.28964,
-      "momGrowth": -0.746507,
-      "yoyGrowth": -0.598999
+      "momGrowth": -0.453574,
+      "yoyGrowth": -0.08419
     },
     {
       "storeId": "2716",
@@ -578,11 +592,11 @@
       "am": "จิดานันท์",
       "target": 82531.0,
       "currentSales": 88990.0,
-      "previousMonthSales": 94300.0,
-      "lastYearSales": 158700.0,
+      "previousMonthSales": 44600.0,
+      "lastYearSales": 112100.0,
       "targetAchievement": 1.078262,
-      "momGrowth": -0.05631,
-      "yoyGrowth": -0.439256
+      "momGrowth": 0.995291,
+      "yoyGrowth": -0.206155
     },
     {
       "storeId": "2727",
@@ -593,11 +607,11 @@
       "am": "จิดานันท์",
       "target": 69403.0,
       "currentSales": 10900.0,
-      "previousMonthSales": 79300.0,
-      "lastYearSales": 41750.0,
+      "previousMonthSales": 11900.0,
+      "lastYearSales": 21900.0,
       "targetAchievement": 0.157054,
-      "momGrowth": -0.862547,
-      "yoyGrowth": -0.738922
+      "momGrowth": -0.084034,
+      "yoyGrowth": -0.502283
     },
     {
       "storeId": "2757",
@@ -608,10 +622,10 @@
       "am": "จิดานันท์",
       "target": 85489.0,
       "currentSales": 39180.0,
-      "previousMonthSales": 97680.0,
+      "previousMonthSales": 53290.0,
       "lastYearSales": 0,
       "targetAchievement": 0.458305,
-      "momGrowth": -0.598894,
+      "momGrowth": -0.264778,
       "yoyGrowth": null
     },
     {
@@ -623,11 +637,11 @@
       "am": "จิดานันท์",
       "target": 226255.0,
       "currentSales": 94680.0,
-      "previousMonthSales": 267862.0,
-      "lastYearSales": 151450.0,
+      "previousMonthSales": 128590.0,
+      "lastYearSales": 94250.0,
       "targetAchievement": 0.418466,
-      "momGrowth": -0.646534,
-      "yoyGrowth": -0.374843
+      "momGrowth": -0.263706,
+      "yoyGrowth": 0.004562
     },
     {
       "storeId": "3038",
@@ -638,10 +652,10 @@
       "am": "จิดานันท์",
       "target": 103663.0,
       "currentSales": 46850.0,
-      "previousMonthSales": 118445.0,
+      "previousMonthSales": 41390.0,
       "lastYearSales": 0,
       "targetAchievement": 0.451945,
-      "momGrowth": -0.604458,
+      "momGrowth": 0.131916,
       "yoyGrowth": null
     },
     {
@@ -653,10 +667,10 @@
       "am": "จิดานันท์",
       "target": 26685.0,
       "currentSales": 18590.0,
-      "previousMonthSales": 30490.0,
+      "previousMonthSales": 10900.0,
       "lastYearSales": 0,
       "targetAchievement": 0.696646,
-      "momGrowth": -0.390292,
+      "momGrowth": 0.705505,
       "yoyGrowth": null
     },
     {
@@ -668,11 +682,11 @@
       "am": "จีรวรรณ",
       "target": 275959.0,
       "currentSales": 145740.0,
-      "previousMonthSales": 326260.0,
-      "lastYearSales": 352400.0,
+      "previousMonthSales": 107370.0,
+      "lastYearSales": 202600.0,
       "targetAchievement": 0.528122,
-      "momGrowth": -0.553301,
-      "yoyGrowth": -0.586436
+      "momGrowth": 0.357362,
+      "yoyGrowth": -0.280652
     },
     {
       "storeId": "242",
@@ -683,11 +697,11 @@
       "am": "จีรวรรณ",
       "target": 778653.0,
       "currentSales": 256800.0,
-      "previousMonthSales": 928834.2,
-      "lastYearSales": 627155.0,
+      "previousMonthSales": 399499.2,
+      "lastYearSales": 314505.0,
       "targetAchievement": 0.3298,
-      "momGrowth": -0.723524,
-      "yoyGrowth": -0.590532
+      "momGrowth": -0.357195,
+      "yoyGrowth": -0.183479
     },
     {
       "storeId": "308",
@@ -698,11 +712,11 @@
       "am": "จีรวรรณ",
       "target": 527533.0,
       "currentSales": 138112.0,
-      "previousMonthSales": 624800.0,
-      "lastYearSales": 466899.0,
+      "previousMonthSales": 325200.0,
+      "lastYearSales": 235149.0,
       "targetAchievement": 0.261807,
-      "momGrowth": -0.77895,
-      "yoyGrowth": -0.704193
+      "momGrowth": -0.575301,
+      "yoyGrowth": -0.412662
     },
     {
       "storeId": "321",
@@ -713,11 +727,11 @@
       "am": "จีรวรรณ",
       "target": 1436968.0,
       "currentSales": 681534.0,
-      "previousMonthSales": 1695598.7,
-      "lastYearSales": 1590900.0,
+      "previousMonthSales": 839457.2,
+      "lastYearSales": 756775.0,
       "targetAchievement": 0.474286,
-      "momGrowth": -0.598057,
-      "yoyGrowth": -0.571605
+      "momGrowth": -0.188125,
+      "yoyGrowth": -0.099423
     },
     {
       "storeId": "484",
@@ -728,11 +742,11 @@
       "am": "จีรวรรณ",
       "target": 479288.0,
       "currentSales": 280747.0,
-      "previousMonthSales": 545981.03,
-      "lastYearSales": 317690.0,
+      "previousMonthSales": 262756.03,
+      "lastYearSales": 207400.0,
       "targetAchievement": 0.585758,
-      "momGrowth": -0.485793,
-      "yoyGrowth": -0.116286
+      "momGrowth": 0.06847,
+      "yoyGrowth": 0.35365
     },
     {
       "storeId": "544",
@@ -743,11 +757,11 @@
       "am": "จีรวรรณ",
       "target": 327112.0,
       "currentSales": 71880.0,
-      "previousMonthSales": 372630.0,
-      "lastYearSales": 182600.0,
+      "previousMonthSales": 206990.0,
+      "lastYearSales": 108250.0,
       "targetAchievement": 0.219741,
-      "momGrowth": -0.807101,
-      "yoyGrowth": -0.606353
+      "momGrowth": -0.652737,
+      "yoyGrowth": -0.335982
     },
     {
       "storeId": "545",
@@ -758,11 +772,11 @@
       "am": "จีรวรรณ",
       "target": 253601.0,
       "currentSales": 81780.0,
-      "previousMonthSales": 288890.0,
-      "lastYearSales": 201450.0,
+      "previousMonthSales": 203510.0,
+      "lastYearSales": 105400.0,
       "targetAchievement": 0.322475,
-      "momGrowth": -0.716916,
-      "yoyGrowth": -0.594043
+      "momGrowth": -0.598152,
+      "yoyGrowth": -0.224099
     },
     {
       "storeId": "705",
@@ -773,8 +787,8 @@
       "am": "จีรวรรณ",
       "target": 106736.0,
       "currentSales": 0,
-      "previousMonthSales": 112790.0,
-      "lastYearSales": 25850.0,
+      "previousMonthSales": 78300.0,
+      "lastYearSales": 10950.0,
       "targetAchievement": 0.0,
       "momGrowth": -1.0,
       "yoyGrowth": -1.0
@@ -788,11 +802,11 @@
       "am": "จีรวรรณ",
       "target": 540698.0,
       "currentSales": 214490.0,
-      "previousMonthSales": 879910.0,
-      "lastYearSales": 390150.0,
+      "previousMonthSales": 334600.0,
+      "lastYearSales": 214300.0,
       "targetAchievement": 0.396691,
-      "momGrowth": -0.756236,
-      "yoyGrowth": -0.450237
+      "momGrowth": -0.358966,
+      "yoyGrowth": 0.000887
     },
     {
       "storeId": "780",
@@ -803,11 +817,11 @@
       "am": "จีรวรรณ",
       "target": 328244.0,
       "currentSales": 82643.0,
-      "previousMonthSales": 373920.0,
-      "lastYearSales": 177800.0,
+      "previousMonthSales": 168600.0,
+      "lastYearSales": 113900.0,
       "targetAchievement": 0.251773,
-      "momGrowth": -0.778982,
-      "yoyGrowth": -0.535191
+      "momGrowth": -0.509828,
+      "yoyGrowth": -0.274425
     },
     {
       "storeId": "1069",
@@ -818,11 +832,11 @@
       "am": "จีรวรรณ",
       "target": 449501.0,
       "currentSales": 252072.0,
-      "previousMonthSales": 532346.0,
-      "lastYearSales": 228950.0,
+      "previousMonthSales": 217930.0,
+      "lastYearSales": 117600.0,
       "targetAchievement": 0.560782,
-      "momGrowth": -0.526488,
-      "yoyGrowth": 0.100991
+      "momGrowth": 0.156665,
+      "yoyGrowth": 1.143469
     },
     {
       "storeId": "1620",
@@ -833,11 +847,11 @@
       "am": "จีรวรรณ",
       "target": 400692.0,
       "currentSales": 183410.57,
-      "previousMonthSales": 456450.0,
-      "lastYearSales": 334050.0,
+      "previousMonthSales": 215180.0,
+      "lastYearSales": 213250.0,
       "targetAchievement": 0.457735,
-      "momGrowth": -0.59818,
-      "yoyGrowth": -0.450949
+      "momGrowth": -0.147641,
+      "yoyGrowth": -0.139927
     },
     {
       "storeId": "2445",
@@ -848,11 +862,11 @@
       "am": "จีรวรรณ",
       "target": 274845.0,
       "currentSales": 150970.0,
-      "previousMonthSales": 323990.0,
-      "lastYearSales": 241350.0,
+      "previousMonthSales": 153180.0,
+      "lastYearSales": 149400.0,
       "targetAchievement": 0.549291,
-      "momGrowth": -0.534029,
-      "yoyGrowth": -0.374477
+      "momGrowth": -0.014427,
+      "yoyGrowth": 0.010509
     },
     {
       "storeId": "2799",
@@ -863,10 +877,10 @@
       "am": "จีรวรรณ",
       "target": 375068.0,
       "currentSales": 118730.0,
-      "previousMonthSales": 449706.0,
+      "previousMonthSales": 170770.0,
       "lastYearSales": 0,
       "targetAchievement": 0.316556,
-      "momGrowth": -0.735983,
+      "momGrowth": -0.304737,
       "yoyGrowth": null
     },
     {
@@ -878,10 +892,10 @@
       "am": "จีรวรรณ",
       "target": 305359.0,
       "currentSales": 73130.0,
-      "previousMonthSales": 358573.0,
+      "previousMonthSales": 193570.0,
       "lastYearSales": 0,
       "targetAchievement": 0.239489,
-      "momGrowth": -0.796053,
+      "momGrowth": -0.622204,
       "yoyGrowth": null
     },
     {
@@ -893,10 +907,10 @@
       "am": "จีรวรรณ",
       "target": 160154.0,
       "currentSales": 91200.0,
-      "previousMonthSales": 210113.0,
+      "previousMonthSales": 104763.0,
       "lastYearSales": 0,
       "targetAchievement": 0.569452,
-      "momGrowth": -0.565948,
+      "momGrowth": -0.129464,
       "yoyGrowth": null
     },
     {
@@ -908,10 +922,10 @@
       "am": "จีรวรรณ",
       "target": 258912.0,
       "currentSales": 76360.0,
-      "previousMonthSales": 303630.0,
+      "previousMonthSales": 151450.0,
       "lastYearSales": 0,
       "targetAchievement": 0.294926,
-      "momGrowth": -0.74851,
+      "momGrowth": -0.495807,
       "yoyGrowth": null
     },
     {
@@ -923,10 +937,10 @@
       "am": "จีรวรรณ",
       "target": 235105.0,
       "currentSales": 33700.0,
-      "previousMonthSales": 267820.0,
+      "previousMonthSales": 86050.0,
       "lastYearSales": 0,
       "targetAchievement": 0.14334,
-      "momGrowth": -0.874169,
+      "momGrowth": -0.608367,
       "yoyGrowth": null
     },
     {
@@ -938,11 +952,11 @@
       "am": "จุฑารัตน์",
       "target": 1054172.0,
       "currentSales": 611455.29,
-      "previousMonthSales": 1344470.71,
-      "lastYearSales": 711505.0,
+      "previousMonthSales": 589329.71,
+      "lastYearSales": 395065.0,
       "targetAchievement": 0.580034,
-      "momGrowth": -0.545207,
-      "yoyGrowth": -0.140617
+      "momGrowth": 0.037544,
+      "yoyGrowth": 0.547733
     },
     {
       "storeId": "197",
@@ -953,11 +967,11 @@
       "am": "จุฑารัตน์",
       "target": 106319.0,
       "currentSales": 10900.0,
-      "previousMonthSales": 133203.0,
-      "lastYearSales": 88550.0,
+      "previousMonthSales": 78090.0,
+      "lastYearSales": 33850.0,
       "targetAchievement": 0.102522,
-      "momGrowth": -0.91817,
-      "yoyGrowth": -0.876906
+      "momGrowth": -0.860417,
+      "yoyGrowth": -0.677991
     },
     {
       "storeId": "647",
@@ -968,11 +982,11 @@
       "am": "จุฑารัตน์",
       "target": 1230048.0,
       "currentSales": 402873.0,
-      "previousMonthSales": 1448793.0,
-      "lastYearSales": 1308230.0,
+      "previousMonthSales": 695630.0,
+      "lastYearSales": 661400.0,
       "targetAchievement": 0.327526,
-      "momGrowth": -0.721925,
-      "yoyGrowth": -0.692047
+      "momGrowth": -0.420852,
+      "yoyGrowth": -0.390878
     },
     {
       "storeId": "1071",
@@ -983,11 +997,11 @@
       "am": "จุฑารัตน์",
       "target": 8199.0,
       "currentSales": 39950.0,
-      "previousMonthSales": 26696.8,
-      "lastYearSales": 24350.0,
+      "previousMonthSales": 12177.6,
+      "lastYearSales": 17650.0,
       "targetAchievement": 4.872545,
-      "momGrowth": 0.496434,
-      "yoyGrowth": 0.640657
+      "momGrowth": 2.280614,
+      "yoyGrowth": 1.263456
     },
     {
       "storeId": "1086",
@@ -998,11 +1012,11 @@
       "am": "จุฑารัตน์",
       "target": 681710.0,
       "currentSales": 210490.0,
-      "previousMonthSales": 778920.0,
-      "lastYearSales": 619450.0,
+      "previousMonthSales": 434800.0,
+      "lastYearSales": 286000.0,
       "targetAchievement": 0.308768,
-      "momGrowth": -0.729767,
-      "yoyGrowth": -0.660199
+      "momGrowth": -0.515892,
+      "yoyGrowth": -0.264021
     },
     {
       "storeId": "2441",
@@ -1013,11 +1027,11 @@
       "am": "จุฑารัตน์",
       "target": 346552.0,
       "currentSales": 164480.0,
-      "previousMonthSales": 420020.0,
-      "lastYearSales": 190900.0,
+      "previousMonthSales": 210970.0,
+      "lastYearSales": 100300.0,
       "targetAchievement": 0.474619,
-      "momGrowth": -0.6084,
-      "yoyGrowth": -0.138397
+      "momGrowth": -0.220363,
+      "yoyGrowth": 0.63988
     },
     {
       "storeId": "2465",
@@ -1028,11 +1042,11 @@
       "am": "จุฑารัตน์",
       "target": 411431.0,
       "currentSales": 181215.48,
-      "previousMonthSales": 480853.0,
-      "lastYearSales": 333850.0,
+      "previousMonthSales": 161870.0,
+      "lastYearSales": 180900.0,
       "targetAchievement": 0.440452,
-      "momGrowth": -0.623137,
-      "yoyGrowth": -0.457195
+      "momGrowth": 0.119512,
+      "yoyGrowth": 0.001744
     },
     {
       "storeId": "2615",
@@ -1043,11 +1057,11 @@
       "am": "จุฑารัตน์",
       "target": 192538.0,
       "currentSales": 82470.0,
-      "previousMonthSales": 219994.0,
-      "lastYearSales": 106550.0,
+      "previousMonthSales": 103629.0,
+      "lastYearSales": 57950.0,
       "targetAchievement": 0.428331,
-      "momGrowth": -0.625126,
-      "yoyGrowth": -0.225997
+      "momGrowth": -0.20418,
+      "yoyGrowth": 0.423123
     },
     {
       "storeId": "2633",
@@ -1058,11 +1072,11 @@
       "am": "จุฑารัตน์",
       "target": 289209.0,
       "currentSales": 88260.0,
-      "previousMonthSales": 353951.5,
-      "lastYearSales": 165130.0,
+      "previousMonthSales": 116400.0,
+      "lastYearSales": 70900.0,
       "targetAchievement": 0.305177,
-      "momGrowth": -0.750644,
-      "yoyGrowth": -0.465512
+      "momGrowth": -0.241753,
+      "yoyGrowth": 0.244852
     },
     {
       "storeId": "3067",
@@ -1073,10 +1087,10 @@
       "am": "จุฑารัตน์",
       "target": 204578.0,
       "currentSales": 53540.0,
-      "previousMonthSales": 233750.0,
+      "previousMonthSales": 117500.0,
       "lastYearSales": 0,
       "targetAchievement": 0.261709,
-      "momGrowth": -0.770952,
+      "momGrowth": -0.54434,
       "yoyGrowth": null
     },
     {
@@ -1088,11 +1102,11 @@
       "am": "ธนเดช",
       "target": 241292.0,
       "currentSales": 109790.0,
-      "previousMonthSales": 275700.0,
-      "lastYearSales": 222649.0,
+      "previousMonthSales": 61980.0,
+      "lastYearSales": 80250.0,
       "targetAchievement": 0.455009,
-      "momGrowth": -0.601777,
-      "yoyGrowth": -0.506892
+      "momGrowth": 0.771378,
+      "yoyGrowth": 0.3681
     },
     {
       "storeId": "249",
@@ -1103,11 +1117,11 @@
       "am": "ธนเดช",
       "target": 781132.0,
       "currentSales": 373110.0,
-      "previousMonthSales": 892520.0,
-      "lastYearSales": 651150.0,
+      "previousMonthSales": 311360.0,
+      "lastYearSales": 319400.0,
       "targetAchievement": 0.477653,
-      "momGrowth": -0.581959,
-      "yoyGrowth": -0.426998
+      "momGrowth": 0.198323,
+      "yoyGrowth": 0.168159
     },
     {
       "storeId": "272",
@@ -1118,11 +1132,11 @@
       "am": "ธนเดช",
       "target": 974024.0,
       "currentSales": 254999.0,
-      "previousMonthSales": 1141273.6,
-      "lastYearSales": 894728.0,
+      "previousMonthSales": 434009.4,
+      "lastYearSales": 418779.0,
       "targetAchievement": 0.2618,
-      "momGrowth": -0.776566,
-      "yoyGrowth": -0.714998
+      "momGrowth": -0.412457,
+      "yoyGrowth": -0.391089
     },
     {
       "storeId": "273",
@@ -1133,11 +1147,11 @@
       "am": "ธนเดช",
       "target": 329959.0,
       "currentSales": 104580.0,
-      "previousMonthSales": 377010.0,
-      "lastYearSales": 209350.0,
+      "previousMonthSales": 195340.0,
+      "lastYearSales": 128100.0,
       "targetAchievement": 0.316948,
-      "momGrowth": -0.722607,
-      "yoyGrowth": -0.500454
+      "momGrowth": -0.464626,
+      "yoyGrowth": -0.183607
     },
     {
       "storeId": "298",
@@ -1148,11 +1162,11 @@
       "am": "ธนเดช",
       "target": 946405.0,
       "currentSales": 320019.0,
-      "previousMonthSales": 1129460.0,
-      "lastYearSales": 623300.0,
+      "previousMonthSales": 450640.0,
+      "lastYearSales": 278700.0,
       "targetAchievement": 0.338142,
-      "momGrowth": -0.716662,
-      "yoyGrowth": -0.486573
+      "momGrowth": -0.289857,
+      "yoyGrowth": 0.148256
     },
     {
       "storeId": "387",
@@ -1163,11 +1177,11 @@
       "am": "ธนเดช",
       "target": 376974.0,
       "currentSales": 93950.0,
-      "previousMonthSales": 430730.0,
-      "lastYearSales": 240100.0,
+      "previousMonthSales": 198090.0,
+      "lastYearSales": 115150.0,
       "targetAchievement": 0.249221,
-      "momGrowth": -0.781882,
-      "yoyGrowth": -0.608705
+      "momGrowth": -0.525721,
+      "yoyGrowth": -0.184108
     },
     {
       "storeId": "686",
@@ -1178,11 +1192,11 @@
       "am": "ธนเดช",
       "target": 527928.0,
       "currentSales": 189130.0,
-      "previousMonthSales": 610807.72,
-      "lastYearSales": 590700.0,
+      "previousMonthSales": 284717.72,
+      "lastYearSales": 337500.0,
       "targetAchievement": 0.35825,
-      "momGrowth": -0.690361,
-      "yoyGrowth": -0.679821
+      "momGrowth": -0.335728,
+      "yoyGrowth": -0.439615
     },
     {
       "storeId": "707",
@@ -1194,7 +1208,7 @@
       "target": 21511.0,
       "currentSales": 0,
       "previousMonthSales": 22800.0,
-      "lastYearSales": 44200.0,
+      "lastYearSales": 36300.0,
       "targetAchievement": 0.0,
       "momGrowth": -1.0,
       "yoyGrowth": -1.0
@@ -1208,11 +1222,11 @@
       "am": "ธนเดช",
       "target": 974536.0,
       "currentSales": 404260.0,
-      "previousMonthSales": 1113503.0,
-      "lastYearSales": 1048628.0,
+      "previousMonthSales": 486840.0,
+      "lastYearSales": 593704.0,
       "targetAchievement": 0.414823,
-      "momGrowth": -0.636948,
-      "yoyGrowth": -0.614487
+      "momGrowth": -0.169625,
+      "yoyGrowth": -0.319088
     },
     {
       "storeId": "2685",
@@ -1223,11 +1237,11 @@
       "am": "ธนเดช",
       "target": 151208.0,
       "currentSales": 112475.72,
-      "previousMonthSales": 172770.0,
-      "lastYearSales": 125300.0,
+      "previousMonthSales": 87990.0,
+      "lastYearSales": 15400.0,
       "targetAchievement": 0.743848,
-      "momGrowth": -0.348986,
-      "yoyGrowth": -0.102349
+      "momGrowth": 0.278278,
+      "yoyGrowth": 6.303618
     },
     {
       "storeId": "2686",
@@ -1238,11 +1252,11 @@
       "am": "ธนเดช",
       "target": 318318.0,
       "currentSales": 51080.0,
-      "previousMonthSales": 374610.0,
-      "lastYearSales": 325350.0,
+      "previousMonthSales": 147970.0,
+      "lastYearSales": 99600.0,
       "targetAchievement": 0.160468,
-      "momGrowth": -0.863645,
-      "yoyGrowth": -0.843
+      "momGrowth": -0.654795,
+      "yoyGrowth": -0.487149
     },
     {
       "storeId": "2785",
@@ -1253,11 +1267,11 @@
       "am": "ธนเดช",
       "target": 89428.0,
       "currentSales": 68400.0,
-      "previousMonthSales": 112933.0,
-      "lastYearSales": 26350.0,
+      "previousMonthSales": 44600.0,
+      "lastYearSales": 0,
       "targetAchievement": 0.764861,
-      "momGrowth": -0.394331,
-      "yoyGrowth": 1.595825
+      "momGrowth": 0.533632,
+      "yoyGrowth": null
     },
     {
       "storeId": "2919",
@@ -1268,10 +1282,10 @@
       "am": "ธนเดช",
       "target": 327709.0,
       "currentSales": 53290.0,
-      "previousMonthSales": 374440.0,
+      "previousMonthSales": 198150.0,
       "lastYearSales": 0,
       "targetAchievement": 0.162614,
-      "momGrowth": -0.857681,
+      "momGrowth": -0.731062,
       "yoyGrowth": null
     },
     {
@@ -1283,10 +1297,10 @@
       "am": "ธนเดช",
       "target": 197060.0,
       "currentSales": 54290.0,
-      "previousMonthSales": 225160.0,
+      "previousMonthSales": 110890.0,
       "lastYearSales": 0,
       "targetAchievement": 0.2755,
-      "momGrowth": -0.758883,
+      "momGrowth": -0.510416,
       "yoyGrowth": null
     },
     {
@@ -1298,10 +1312,10 @@
       "am": "ธนเดช",
       "target": 98127.0,
       "currentSales": 72880.0,
-      "previousMonthSales": 112120.0,
+      "previousMonthSales": 0,
       "lastYearSales": 0,
       "targetAchievement": 0.742711,
-      "momGrowth": -0.349982,
+      "momGrowth": null,
       "yoyGrowth": null
     },
     {
@@ -1328,11 +1342,11 @@
       "am": "น้ำทิพย์",
       "target": 1288926.0,
       "currentSales": 356980.0,
-      "previousMonthSales": 1472724.0,
-      "lastYearSales": 1049536.78,
+      "previousMonthSales": 637185.0,
+      "lastYearSales": 517301.78,
       "targetAchievement": 0.276959,
-      "momGrowth": -0.757606,
-      "yoyGrowth": -0.659869
+      "momGrowth": -0.439755,
+      "yoyGrowth": -0.309919
     },
     {
       "storeId": "565",
@@ -1358,11 +1372,11 @@
       "am": "น้ำทิพย์",
       "target": 314870.0,
       "currentSales": 185725.0,
-      "previousMonthSales": 359770.0,
-      "lastYearSales": 182100.0,
+      "previousMonthSales": 249400.0,
+      "lastYearSales": 47250.0,
       "targetAchievement": 0.589847,
-      "momGrowth": -0.483767,
-      "yoyGrowth": 0.019907
+      "momGrowth": -0.255313,
+      "yoyGrowth": 2.930688
     },
     {
       "storeId": "674",
@@ -1373,11 +1387,11 @@
       "am": "น้ำทิพย์",
       "target": 221303.0,
       "currentSales": 105580.0,
-      "previousMonthSales": 252860.0,
-      "lastYearSales": 95850.0,
+      "previousMonthSales": 139070.0,
+      "lastYearSales": 37300.0,
       "targetAchievement": 0.477083,
-      "momGrowth": -0.582457,
-      "yoyGrowth": 0.101513
+      "momGrowth": -0.240814,
+      "yoyGrowth": 1.830563
     },
     {
       "storeId": "675",
@@ -1388,11 +1402,11 @@
       "am": "น้ำทิพย์",
       "target": 495406.0,
       "currentSales": 175460.0,
-      "previousMonthSales": 576688.0,
-      "lastYearSales": 497550.0,
+      "previousMonthSales": 231790.0,
+      "lastYearSales": 229700.0,
       "targetAchievement": 0.354174,
-      "momGrowth": -0.695745,
-      "yoyGrowth": -0.647352
+      "momGrowth": -0.243022,
+      "yoyGrowth": -0.236134
     },
     {
       "storeId": "691",
@@ -1403,11 +1417,11 @@
       "am": "น้ำทิพย์",
       "target": 413479.0,
       "currentSales": 126380.0,
-      "previousMonthSales": 472440.0,
-      "lastYearSales": 253700.0,
+      "previousMonthSales": 226790.0,
+      "lastYearSales": 154700.0,
       "targetAchievement": 0.30565,
-      "momGrowth": -0.732495,
-      "yoyGrowth": -0.501853
+      "momGrowth": -0.442744,
+      "yoyGrowth": -0.183064
     },
     {
       "storeId": "741",
@@ -1418,11 +1432,11 @@
       "am": "น้ำทิพย์",
       "target": 331188.0,
       "currentSales": 113270.0,
-      "previousMonthSales": 406215.0,
-      "lastYearSales": 216000.0,
+      "previousMonthSales": 152450.0,
+      "lastYearSales": 112700.0,
       "targetAchievement": 0.342011,
-      "momGrowth": -0.721158,
-      "yoyGrowth": -0.475602
+      "momGrowth": -0.257002,
+      "yoyGrowth": 0.005058
     },
     {
       "storeId": "1558",
@@ -1433,11 +1447,11 @@
       "am": "น้ำทิพย์",
       "target": 7255.0,
       "currentSales": 0,
-      "previousMonthSales": 13124.0,
-      "lastYearSales": 15900.0,
+      "previousMonthSales": 5434.0,
+      "lastYearSales": 0,
       "targetAchievement": 0.0,
       "momGrowth": -1.0,
-      "yoyGrowth": -1.0
+      "yoyGrowth": null
     },
     {
       "storeId": "2359",
@@ -1448,11 +1462,11 @@
       "am": "น้ำทิพย์",
       "target": 167881.0,
       "currentSales": 64190.0,
-      "previousMonthSales": 191820.0,
-      "lastYearSales": 145450.0,
+      "previousMonthSales": 80340.0,
+      "lastYearSales": 80000.0,
       "targetAchievement": 0.382354,
-      "momGrowth": -0.665363,
-      "yoyGrowth": -0.55868
+      "momGrowth": -0.201021,
+      "yoyGrowth": -0.197625
     },
     {
       "storeId": "2680",
@@ -1463,11 +1477,11 @@
       "am": "น้ำทิพย์",
       "target": 102214.0,
       "currentSales": 34970.0,
-      "previousMonthSales": 116790.0,
-      "lastYearSales": 49050.0,
+      "previousMonthSales": 52000.0,
+      "lastYearSales": 25350.0,
       "targetAchievement": 0.342125,
-      "momGrowth": -0.700574,
-      "yoyGrowth": -0.287054
+      "momGrowth": -0.3275,
+      "yoyGrowth": 0.379487
     },
     {
       "storeId": "2684",
@@ -1478,11 +1492,11 @@
       "am": "น้ำทิพย์",
       "target": 41476.0,
       "currentSales": 58750.0,
-      "previousMonthSales": 47390.0,
-      "lastYearSales": 46200.0,
+      "previousMonthSales": 39700.0,
+      "lastYearSales": 18650.0,
       "targetAchievement": 1.416482,
-      "momGrowth": 0.239713,
-      "yoyGrowth": 0.271645
+      "momGrowth": 0.479849,
+      "yoyGrowth": 2.150134
     },
     {
       "storeId": "2755",
@@ -1493,10 +1507,10 @@
       "am": "น้ำทิพย์",
       "target": 191625.0,
       "currentSales": 66880.0,
-      "previousMonthSales": 218950.0,
+      "previousMonthSales": 64190.0,
       "lastYearSales": 0,
       "targetAchievement": 0.349015,
-      "momGrowth": -0.694542,
+      "momGrowth": 0.041907,
       "yoyGrowth": null
     },
     {
@@ -1508,11 +1522,11 @@
       "am": "น้ำทิพย์",
       "target": 105864.0,
       "currentSales": 21800.0,
-      "previousMonthSales": 120960.0,
-      "lastYearSales": 66050.0,
+      "previousMonthSales": 56770.0,
+      "lastYearSales": 49250.0,
       "targetAchievement": 0.205925,
-      "momGrowth": -0.819775,
-      "yoyGrowth": -0.669947
+      "momGrowth": -0.615994,
+      "yoyGrowth": -0.55736
     },
     {
       "storeId": "2879",
@@ -1523,10 +1537,10 @@
       "am": "น้ำทิพย์",
       "target": 95904.0,
       "currentSales": 34700.0,
-      "previousMonthSales": 109580.0,
+      "previousMonthSales": 22800.0,
       "lastYearSales": 0,
       "targetAchievement": 0.36182,
-      "momGrowth": -0.683336,
+      "momGrowth": 0.52193,
       "yoyGrowth": null
     },
     {
@@ -1538,10 +1552,10 @@
       "am": "น้ำทิพย์",
       "target": 137192.0,
       "currentSales": 33700.0,
-      "previousMonthSales": 156755.0,
+      "previousMonthSales": 36390.0,
       "lastYearSales": 0,
       "targetAchievement": 0.245641,
-      "momGrowth": -0.785015,
+      "momGrowth": -0.073921,
       "yoyGrowth": null
     },
     {
@@ -1553,10 +1567,10 @@
       "am": "น้ำทิพย์",
       "target": 46359.0,
       "currentSales": 7690.0,
-      "previousMonthSales": 52970.0,
+      "previousMonthSales": 23070.0,
       "lastYearSales": 0,
       "targetAchievement": 0.165879,
-      "momGrowth": -0.854823,
+      "momGrowth": -0.666667,
       "yoyGrowth": null
     },
     {
@@ -1568,10 +1582,10 @@
       "am": "น้ำทิพย์",
       "target": 155768.0,
       "currentSales": 46640.0,
-      "previousMonthSales": 177980.0,
+      "previousMonthSales": 73880.0,
       "lastYearSales": 0,
       "targetAchievement": 0.29942,
-      "momGrowth": -0.737948,
+      "momGrowth": -0.368706,
       "yoyGrowth": null
     },
     {
@@ -1583,11 +1597,11 @@
       "am": "ประวิชญา",
       "target": 3212302.0,
       "currentSales": 1446230.0,
-      "previousMonthSales": 3648010.0,
-      "lastYearSales": 3379840.0,
+      "previousMonthSales": 1314570.0,
+      "lastYearSales": 1704550.0,
       "targetAchievement": 0.450216,
-      "momGrowth": -0.603556,
-      "yoyGrowth": -0.572101
+      "momGrowth": 0.100154,
+      "yoyGrowth": -0.151547
     },
     {
       "storeId": "256",
@@ -1598,11 +1612,11 @@
       "am": "ประวิชญา",
       "target": 353536.0,
       "currentSales": 104830.0,
-      "previousMonthSales": 414850.0,
-      "lastYearSales": 309700.0,
+      "previousMonthSales": 191880.0,
+      "lastYearSales": 95050.0,
       "targetAchievement": 0.296519,
-      "momGrowth": -0.747306,
-      "yoyGrowth": -0.661511
+      "momGrowth": -0.453669,
+      "yoyGrowth": 0.102893
     },
     {
       "storeId": "310",
@@ -1613,11 +1627,11 @@
       "am": "ประวิชญา",
       "target": 1055620.0,
       "currentSales": 415710.0,
-      "previousMonthSales": 874270.0,
-      "lastYearSales": 669000.0,
+      "previousMonthSales": 349480.0,
+      "lastYearSales": 366350.0,
       "targetAchievement": 0.393806,
-      "momGrowth": -0.524506,
-      "yoyGrowth": -0.37861
+      "momGrowth": 0.18951,
+      "yoyGrowth": 0.134735
     },
     {
       "storeId": "313",
@@ -1628,11 +1642,11 @@
       "am": "ประวิชญา",
       "target": 1532839.0,
       "currentSales": 529310.0,
-      "previousMonthSales": 1065860.0,
-      "lastYearSales": 1039850.0,
+      "previousMonthSales": 464220.0,
+      "lastYearSales": 562600.0,
       "targetAchievement": 0.345313,
-      "momGrowth": -0.503396,
-      "yoyGrowth": -0.490975
+      "momGrowth": 0.140214,
+      "yoyGrowth": -0.059172
     },
     {
       "storeId": "329",
@@ -1643,11 +1657,11 @@
       "am": "ประวิชญา",
       "target": 1595971.0,
       "currentSales": 646299.0,
-      "previousMonthSales": 2166333.0,
-      "lastYearSales": 1638635.0,
+      "previousMonthSales": 878854.0,
+      "lastYearSales": 791675.0,
       "targetAchievement": 0.404957,
-      "momGrowth": -0.701662,
-      "yoyGrowth": -0.605587
+      "momGrowth": -0.264612,
+      "yoyGrowth": -0.183631
     },
     {
       "storeId": "340",
@@ -1658,11 +1672,11 @@
       "am": "ประวิชญา",
       "target": 355500.0,
       "currentSales": 95680.0,
-      "previousMonthSales": 474750.0,
-      "lastYearSales": 615250.0,
+      "previousMonthSales": 189360.0,
+      "lastYearSales": 298000.0,
       "targetAchievement": 0.269142,
-      "momGrowth": -0.798462,
-      "yoyGrowth": -0.844486
+      "momGrowth": -0.494719,
+      "yoyGrowth": -0.678926
     },
     {
       "storeId": "341",
@@ -1673,11 +1687,11 @@
       "am": "ประวิชญา",
       "target": 443699.0,
       "currentSales": 110060.0,
-      "previousMonthSales": 392710.0,
-      "lastYearSales": 453800.0,
+      "previousMonthSales": 167140.0,
+      "lastYearSales": 234300.0,
       "targetAchievement": 0.248051,
-      "momGrowth": -0.719742,
-      "yoyGrowth": -0.75747
+      "momGrowth": -0.34151,
+      "yoyGrowth": -0.53026
     },
     {
       "storeId": "1106",
@@ -1688,11 +1702,11 @@
       "am": "ประวิชญา",
       "target": 417479.0,
       "currentSales": 306283.0,
-      "previousMonthSales": 705530.0,
-      "lastYearSales": 551825.0,
+      "previousMonthSales": 321010.0,
+      "lastYearSales": 181850.0,
       "targetAchievement": 0.733649,
-      "momGrowth": -0.565882,
-      "yoyGrowth": -0.444964
+      "momGrowth": -0.045877,
+      "yoyGrowth": 0.684262
     },
     {
       "storeId": "1113",
@@ -1703,11 +1717,11 @@
       "am": "ประวิชญา",
       "target": 242329.0,
       "currentSales": 133119.0,
-      "previousMonthSales": 516127.0,
-      "lastYearSales": 323050.0,
+      "previousMonthSales": 226060.0,
+      "lastYearSales": 195300.0,
       "targetAchievement": 0.549332,
-      "momGrowth": -0.742081,
-      "yoyGrowth": -0.587931
+      "momGrowth": -0.411134,
+      "yoyGrowth": -0.318387
     },
     {
       "storeId": "1785",
@@ -1718,11 +1732,11 @@
       "am": "ประวิชญา",
       "target": 383626.0,
       "currentSales": 234480.0,
-      "previousMonthSales": 552590.0,
-      "lastYearSales": 440800.0,
+      "previousMonthSales": 229600.0,
+      "lastYearSales": 191550.0,
       "targetAchievement": 0.61122,
-      "momGrowth": -0.575671,
-      "yoyGrowth": -0.468058
+      "momGrowth": 0.021254,
+      "yoyGrowth": 0.224119
     },
     {
       "storeId": "2744",
@@ -1733,11 +1747,11 @@
       "am": "ประวิชญา",
       "target": 270270.0,
       "currentSales": 116850.0,
-      "previousMonthSales": 437970.0,
-      "lastYearSales": 372400.0,
+      "previousMonthSales": 169330.0,
+      "lastYearSales": 189500.0,
       "targetAchievement": 0.432345,
-      "momGrowth": -0.733201,
-      "yoyGrowth": -0.686224
+      "momGrowth": -0.309927,
+      "yoyGrowth": -0.383377
     },
     {
       "storeId": "2909",
@@ -1748,10 +1762,10 @@
       "am": "ประวิชญา",
       "target": 102342.0,
       "currentSales": 78340.0,
-      "previousMonthSales": 162640.0,
+      "previousMonthSales": 53290.0,
       "lastYearSales": 0,
       "targetAchievement": 0.765473,
-      "momGrowth": -0.518323,
+      "momGrowth": 0.470069,
       "yoyGrowth": null
     },
     {
@@ -1763,10 +1777,10 @@
       "am": "ประวิชญา",
       "target": 101675.0,
       "currentSales": 105850.0,
-      "previousMonthSales": 184730.0,
+      "previousMonthSales": 53290.0,
       "lastYearSales": 0,
       "targetAchievement": 1.041062,
-      "momGrowth": -0.427002,
+      "momGrowth": 0.986301,
       "yoyGrowth": null
     },
     {
@@ -1778,10 +1792,10 @@
       "am": "ประวิชญา",
       "target": 102717.0,
       "currentSales": 38180.0,
-      "previousMonthSales": 185920.0,
+      "previousMonthSales": 43390.0,
       "lastYearSales": 0,
       "targetAchievement": 0.371701,
-      "momGrowth": -0.794643,
+      "momGrowth": -0.120074,
       "yoyGrowth": null
     },
     {
@@ -1793,10 +1807,10 @@
       "am": "ประวิชญา",
       "target": 87660.0,
       "currentSales": 28280.0,
-      "previousMonthSales": 100160.0,
+      "previousMonthSales": 46870.0,
       "lastYearSales": 0,
       "targetAchievement": 0.32261,
-      "momGrowth": -0.717652,
+      "momGrowth": -0.396629,
       "yoyGrowth": null
     },
     {
@@ -1898,11 +1912,11 @@
       "am": "พีรวัส",
       "target": 2011561.0,
       "currentSales": 845389.0,
-      "previousMonthSales": 2479941.2,
-      "lastYearSales": 1434555.0,
+      "previousMonthSales": 1162414.2,
+      "lastYearSales": 844220.0,
       "targetAchievement": 0.420265,
-      "momGrowth": -0.659109,
-      "yoyGrowth": -0.410696
+      "momGrowth": -0.27273,
+      "yoyGrowth": 0.001385
     },
     {
       "storeId": "114",
@@ -1913,11 +1927,11 @@
       "am": "พีรวัส",
       "target": 3784946.0,
       "currentSales": 2003621.44,
-      "previousMonthSales": 4501862.92,
-      "lastYearSales": 4029595.81,
+      "previousMonthSales": 1890640.2,
+      "lastYearSales": 1671411.0,
       "targetAchievement": 0.529366,
-      "momGrowth": -0.554935,
-      "yoyGrowth": -0.502774
+      "momGrowth": 0.059758,
+      "yoyGrowth": 0.19876
     },
     {
       "storeId": "115",
@@ -1928,11 +1942,11 @@
       "am": "พีรวัส",
       "target": 3828007.0,
       "currentSales": 1688574.3,
-      "previousMonthSales": 4461035.75,
-      "lastYearSales": 3585194.79,
+      "previousMonthSales": 1951418.75,
+      "lastYearSales": 1581250.0,
       "targetAchievement": 0.441111,
-      "momGrowth": -0.621484,
-      "yoyGrowth": -0.529015
+      "momGrowth": -0.134694,
+      "yoyGrowth": 0.067873
     },
     {
       "storeId": "118",
@@ -1943,11 +1957,11 @@
       "am": "พีรวัส",
       "target": 1623265.0,
       "currentSales": 819919.0,
-      "previousMonthSales": 1944515.0,
-      "lastYearSales": 1800701.63,
+      "previousMonthSales": 1047073.0,
+      "lastYearSales": 819675.0,
       "targetAchievement": 0.505105,
-      "momGrowth": -0.578343,
-      "yoyGrowth": -0.544667
+      "momGrowth": -0.216942,
+      "yoyGrowth": 0.000298
     },
     {
       "storeId": "251",
@@ -1958,11 +1972,11 @@
       "am": "พีรวัส",
       "target": 3901836.0,
       "currentSales": 1382690.0,
-      "previousMonthSales": 4543526.84,
-      "lastYearSales": 4029957.4,
+      "previousMonthSales": 2207137.59,
+      "lastYearSales": 1938834.77,
       "targetAchievement": 0.354369,
-      "momGrowth": -0.695679,
-      "yoyGrowth": -0.656897
+      "momGrowth": -0.373537,
+      "yoyGrowth": -0.286845
     },
     {
       "storeId": "335",
@@ -1973,11 +1987,11 @@
       "am": "พีรวัส",
       "target": 2055661.0,
       "currentSales": 1050505.0,
-      "previousMonthSales": 2404714.0,
-      "lastYearSales": 1791150.93,
+      "previousMonthSales": 1176060.0,
+      "lastYearSales": 820000.93,
       "targetAchievement": 0.51103,
-      "momGrowth": -0.563148,
-      "yoyGrowth": -0.413503
+      "momGrowth": -0.106759,
+      "yoyGrowth": 0.281102
     },
     {
       "storeId": "627",
@@ -1988,11 +2002,11 @@
       "am": "พีรวัส",
       "target": 1018865.0,
       "currentSales": 532950.0,
-      "previousMonthSales": 1299928.77,
-      "lastYearSales": 1170930.0,
+      "previousMonthSales": 550506.0,
+      "lastYearSales": 590040.0,
       "targetAchievement": 0.523082,
-      "momGrowth": -0.590016,
-      "yoyGrowth": -0.544849
+      "momGrowth": -0.031891,
+      "yoyGrowth": -0.096756
     },
     {
       "storeId": "645",
@@ -2003,11 +2017,11 @@
       "am": "พีรวัส",
       "target": 3257383.0,
       "currentSales": 1161970.0,
-      "previousMonthSales": 3799286.2,
-      "lastYearSales": 3594672.0,
+      "previousMonthSales": 1879120.0,
+      "lastYearSales": 1711983.0,
       "targetAchievement": 0.356719,
-      "momGrowth": -0.694161,
-      "yoyGrowth": -0.676752
+      "momGrowth": -0.381641,
+      "yoyGrowth": -0.321272
     },
     {
       "storeId": "1999",
@@ -2018,11 +2032,11 @@
       "am": "พีรวัส",
       "target": 345371.0,
       "currentSales": 204290.0,
-      "previousMonthSales": 444247.73,
-      "lastYearSales": 341000.0,
+      "previousMonthSales": 198167.73,
+      "lastYearSales": 181450.0,
       "targetAchievement": 0.591509,
-      "momGrowth": -0.540144,
-      "yoyGrowth": -0.400909
+      "momGrowth": 0.030894,
+      "yoyGrowth": 0.125875
     },
     {
       "storeId": "2717",
@@ -2033,10 +2047,10 @@
       "am": "พีรวัส",
       "target": 809103.0,
       "currentSales": 438230.0,
-      "previousMonthSales": 1008452.4,
+      "previousMonthSales": 461009.4,
       "lastYearSales": 0,
       "targetAchievement": 0.541624,
-      "momGrowth": -0.565443,
+      "momGrowth": -0.049412,
       "yoyGrowth": null
     },
     {
@@ -2048,11 +2062,11 @@
       "am": "พีระศักดิ์",
       "target": 2549577.0,
       "currentSales": 1123679.0,
-      "previousMonthSales": 2915136.0,
-      "lastYearSales": 2900627.0,
+      "previousMonthSales": 1178085.0,
+      "lastYearSales": 1172723.0,
       "targetAchievement": 0.440732,
-      "momGrowth": -0.614536,
-      "yoyGrowth": -0.612608
+      "momGrowth": -0.046182,
+      "yoyGrowth": -0.041821
     },
     {
       "storeId": "410",
@@ -2063,11 +2077,11 @@
       "am": "พีระศักดิ์",
       "target": 951133.0,
       "currentSales": 470650.0,
-      "previousMonthSales": 1091174.0,
-      "lastYearSales": 596690.0,
+      "previousMonthSales": 415609.0,
+      "lastYearSales": 311600.0,
       "targetAchievement": 0.494831,
-      "momGrowth": -0.568676,
-      "yoyGrowth": -0.211232
+      "momGrowth": 0.132435,
+      "yoyGrowth": 0.51043
     },
     {
       "storeId": "414",
@@ -2078,11 +2092,11 @@
       "am": "พีระศักดิ์",
       "target": 654689.0,
       "currentSales": 196820.0,
-      "previousMonthSales": 756690.0,
-      "lastYearSales": 402550.0,
+      "previousMonthSales": 354920.0,
+      "lastYearSales": 245000.0,
       "targetAchievement": 0.300631,
-      "momGrowth": -0.739893,
-      "yoyGrowth": -0.511067
+      "momGrowth": -0.445452,
+      "yoyGrowth": -0.196653
     },
     {
       "storeId": "417",
@@ -2093,8 +2107,8 @@
       "am": "พีระศักดิ์",
       "target": 51376.0,
       "currentSales": 0,
-      "previousMonthSales": 66047.2,
-      "lastYearSales": 43900.0,
+      "previousMonthSales": 23657.2,
+      "lastYearSales": 21100.0,
       "targetAchievement": 0.0,
       "momGrowth": -1.0,
       "yoyGrowth": -1.0
@@ -2108,11 +2122,11 @@
       "am": "พีระศักดิ์",
       "target": 174314.0,
       "currentSales": 43640.0,
-      "previousMonthSales": 198570.0,
-      "lastYearSales": 86600.0,
+      "previousMonthSales": 107580.0,
+      "lastYearSales": 58750.0,
       "targetAchievement": 0.250353,
-      "momGrowth": -0.780229,
-      "yoyGrowth": -0.496074
+      "momGrowth": -0.594348,
+      "yoyGrowth": -0.257191
     },
     {
       "storeId": "844",
@@ -2123,11 +2137,11 @@
       "am": "พีระศักดิ์",
       "target": 573856.0,
       "currentSales": 273470.0,
-      "previousMonthSales": 653709.0,
-      "lastYearSales": 503200.0,
+      "previousMonthSales": 245190.0,
+      "lastYearSales": 218300.0,
       "targetAchievement": 0.476548,
-      "momGrowth": -0.581664,
-      "yoyGrowth": -0.456538
+      "momGrowth": 0.115339,
+      "yoyGrowth": 0.252726
     },
     {
       "storeId": "865",
@@ -2138,10 +2152,10 @@
       "am": "พีระศักดิ์",
       "target": 58473.0,
       "currentSales": 23800.0,
-      "previousMonthSales": 72513.0,
+      "previousMonthSales": 33700.0,
       "lastYearSales": 11950.0,
       "targetAchievement": 0.407025,
-      "momGrowth": -0.671783,
+      "momGrowth": -0.293769,
       "yoyGrowth": 0.991632
     },
     {
@@ -2153,8 +2167,8 @@
       "am": "พีระศักดิ์",
       "target": 29800.0,
       "currentSales": 0,
-      "previousMonthSales": 31490.0,
-      "lastYearSales": 19650.0,
+      "previousMonthSales": 8690.0,
+      "lastYearSales": 7700.0,
       "targetAchievement": 0.0,
       "momGrowth": -1.0,
       "yoyGrowth": -1.0
@@ -2168,11 +2182,11 @@
       "am": "พีระศักดิ์",
       "target": 426909.0,
       "currentSales": 211300.0,
-      "previousMonthSales": 486314.0,
-      "lastYearSales": 170650.0,
+      "previousMonthSales": 200964.0,
+      "lastYearSales": 93250.0,
       "targetAchievement": 0.494953,
-      "momGrowth": -0.565507,
-      "yoyGrowth": 0.238207
+      "momGrowth": 0.051432,
+      "yoyGrowth": 1.265952
     },
     {
       "storeId": "2647",
@@ -2183,11 +2197,11 @@
       "am": "พีระศักดิ์",
       "target": 190795.0,
       "currentSales": 90200.0,
-      "previousMonthSales": 217345.0,
-      "lastYearSales": 132250.0,
+      "previousMonthSales": 85885.0,
+      "lastYearSales": 85550.0,
       "targetAchievement": 0.472759,
-      "momGrowth": -0.584992,
-      "yoyGrowth": -0.317958
+      "momGrowth": 0.050242,
+      "yoyGrowth": 0.054354
     },
     {
       "storeId": "2722",
@@ -2198,11 +2212,11 @@
       "am": "พีระศักดิ์",
       "target": 320616.0,
       "currentSales": 152793.0,
-      "previousMonthSales": 365230.0,
-      "lastYearSales": 457950.0,
+      "previousMonthSales": 151200.0,
+      "lastYearSales": 242250.0,
       "targetAchievement": 0.476561,
-      "momGrowth": -0.581653,
-      "yoyGrowth": -0.666354
+      "momGrowth": 0.010536,
+      "yoyGrowth": -0.369276
     },
     {
       "storeId": "2743",
@@ -2213,11 +2227,11 @@
       "am": "พีระศักดิ์",
       "target": 137524.0,
       "currentSales": 19280.0,
-      "previousMonthSales": 185841.6,
-      "lastYearSales": 70900.0,
+      "previousMonthSales": 97581.6,
+      "lastYearSales": 17650.0,
       "targetAchievement": 0.140194,
-      "momGrowth": -0.896256,
-      "yoyGrowth": -0.728068
+      "momGrowth": -0.802422,
+      "yoyGrowth": 0.092351
     },
     {
       "storeId": "2779",
@@ -2228,11 +2242,11 @@
       "am": "พีระศักดิ์",
       "target": 98828.0,
       "currentSales": 21800.0,
-      "previousMonthSales": 112580.0,
-      "lastYearSales": 167850.0,
+      "previousMonthSales": 32490.0,
+      "lastYearSales": 120450.0,
       "targetAchievement": 0.220585,
-      "momGrowth": -0.80636,
-      "yoyGrowth": -0.870122
+      "momGrowth": -0.329024,
+      "yoyGrowth": -0.819012
     },
     {
       "storeId": "2843",
@@ -2243,10 +2257,10 @@
       "am": "พีระศักดิ์",
       "target": 97678.0,
       "currentSales": 13090.0,
-      "previousMonthSales": 111270.0,
+      "previousMonthSales": 43390.0,
       "lastYearSales": 0,
       "targetAchievement": 0.134012,
-      "momGrowth": -0.882358,
+      "momGrowth": -0.698318,
       "yoyGrowth": null
     },
     {
@@ -2258,10 +2272,10 @@
       "am": "พีระศักดิ์",
       "target": 152763.0,
       "currentSales": 45870.0,
-      "previousMonthSales": 174020.0,
+      "previousMonthSales": 97930.0,
       "lastYearSales": 0,
       "targetAchievement": 0.300269,
-      "momGrowth": -0.73641,
+      "momGrowth": -0.531604,
       "yoyGrowth": null
     },
     {
@@ -2273,10 +2287,10 @@
       "am": "พีระศักดิ์",
       "target": 120363.0,
       "currentSales": 83030.0,
-      "previousMonthSales": 56750.0,
+      "previousMonthSales": 0,
       "lastYearSales": 0,
       "targetAchievement": 0.68983,
-      "momGrowth": 0.463084,
+      "momGrowth": null,
       "yoyGrowth": null
     },
     {
@@ -2288,10 +2302,10 @@
       "am": "พีระศักดิ์",
       "target": 127718.0,
       "currentSales": 38180.0,
-      "previousMonthSales": 156213.0,
+      "previousMonthSales": 86813.0,
       "lastYearSales": 0,
       "targetAchievement": 0.29894,
-      "momGrowth": -0.75559,
+      "momGrowth": -0.560204,
       "yoyGrowth": null
     },
     {
@@ -2303,11 +2317,11 @@
       "am": "วรรณวนัส",
       "target": 1242967.0,
       "currentSales": 429470.0,
-      "previousMonthSales": 1426112.0,
-      "lastYearSales": 1873563.0,
+      "previousMonthSales": 641979.0,
+      "lastYearSales": 935174.0,
       "targetAchievement": 0.34552,
-      "momGrowth": -0.698853,
-      "yoyGrowth": -0.770774
+      "momGrowth": -0.331022,
+      "yoyGrowth": -0.540759
     },
     {
       "storeId": "253",
@@ -2318,11 +2332,11 @@
       "am": "วรรณวนัส",
       "target": 382287.0,
       "currentSales": 224100.0,
-      "previousMonthSales": 436800.0,
-      "lastYearSales": 174299.0,
+      "previousMonthSales": 293060.0,
+      "lastYearSales": 108000.0,
       "targetAchievement": 0.586209,
-      "momGrowth": -0.486951,
-      "yoyGrowth": 0.285722
+      "momGrowth": -0.23531,
+      "yoyGrowth": 1.075
     },
     {
       "storeId": "260",
@@ -2333,11 +2347,11 @@
       "am": "วรรณวนัส",
       "target": 36022.0,
       "currentSales": 30490.0,
-      "previousMonthSales": 38180.0,
-      "lastYearSales": 83300.0,
+      "previousMonthSales": 10900.0,
+      "lastYearSales": 29600.0,
       "targetAchievement": 0.846427,
-      "momGrowth": -0.201414,
-      "yoyGrowth": -0.633974
+      "momGrowth": 1.797248,
+      "yoyGrowth": 0.030068
     },
     {
       "storeId": "337",
@@ -2348,11 +2362,11 @@
       "am": "วรรณวนัส",
       "target": 2056165.0,
       "currentSales": 729254.0,
-      "previousMonthSales": 2349370.0,
-      "lastYearSales": 1520809.17,
+      "previousMonthSales": 950270.0,
+      "lastYearSales": 868859.17,
       "targetAchievement": 0.354667,
-      "momGrowth": -0.689596,
-      "yoyGrowth": -0.520483
+      "momGrowth": -0.232582,
+      "yoyGrowth": -0.160676
     },
     {
       "storeId": "368",
@@ -2363,11 +2377,11 @@
       "am": "วรรณวนัส",
       "target": 517846.0,
       "currentSales": 129125.0,
-      "previousMonthSales": 591690.0,
-      "lastYearSales": 497550.0,
+      "previousMonthSales": 223040.0,
+      "lastYearSales": 263000.0,
       "targetAchievement": 0.24935,
-      "momGrowth": -0.781769,
-      "yoyGrowth": -0.740478
+      "momGrowth": -0.421068,
+      "yoyGrowth": -0.50903
     },
     {
       "storeId": "377",
@@ -2378,11 +2392,11 @@
       "am": "วรรณวนัส",
       "target": 401467.0,
       "currentSales": 121630.0,
-      "previousMonthSales": 464938.0,
-      "lastYearSales": 398900.0,
+      "previousMonthSales": 249315.0,
+      "lastYearSales": 208050.0,
       "targetAchievement": 0.302964,
-      "momGrowth": -0.738395,
-      "yoyGrowth": -0.695086
+      "momGrowth": -0.512143,
+      "yoyGrowth": -0.415381
     },
     {
       "storeId": "655",
@@ -2393,11 +2407,11 @@
       "am": "วรรณวนัส",
       "target": 249738.0,
       "currentSales": 84079.0,
-      "previousMonthSales": 285350.0,
-      "lastYearSales": 222250.0,
+      "previousMonthSales": 129170.0,
+      "lastYearSales": 107000.0,
       "targetAchievement": 0.336669,
-      "momGrowth": -0.705348,
-      "yoyGrowth": -0.621692
+      "momGrowth": -0.349083,
+      "yoyGrowth": -0.214215
     },
     {
       "storeId": "656",
@@ -2408,11 +2422,11 @@
       "am": "วรรณวนัส",
       "target": 430528.0,
       "currentSales": 81780.0,
-      "previousMonthSales": 491920.0,
-      "lastYearSales": 236950.0,
+      "previousMonthSales": 177960.0,
+      "lastYearSales": 135150.0,
       "targetAchievement": 0.189953,
-      "momGrowth": -0.833753,
-      "yoyGrowth": -0.654864
+      "momGrowth": -0.540459,
+      "yoyGrowth": -0.394895
     },
     {
       "storeId": "673",
@@ -2423,11 +2437,11 @@
       "am": "วรรณวนัส",
       "target": 171583.0,
       "currentSales": 28080.0,
-      "previousMonthSales": 196050.0,
-      "lastYearSales": 130100.0,
+      "previousMonthSales": 88200.0,
+      "lastYearSales": 80300.0,
       "targetAchievement": 0.163653,
-      "momGrowth": -0.856771,
-      "yoyGrowth": -0.784166
+      "momGrowth": -0.681633,
+      "yoyGrowth": -0.650311
     },
     {
       "storeId": "1345",
@@ -2438,11 +2452,11 @@
       "am": "วรรณวนัส",
       "target": 198994.0,
       "currentSales": 56500.0,
-      "previousMonthSales": 236060.0,
-      "lastYearSales": 70300.0,
+      "previousMonthSales": 116250.0,
+      "lastYearSales": 40550.0,
       "targetAchievement": 0.283928,
-      "momGrowth": -0.760654,
-      "yoyGrowth": -0.196302
+      "momGrowth": -0.513978,
+      "yoyGrowth": 0.393342
     },
     {
       "storeId": "1559",
@@ -2453,10 +2467,10 @@
       "am": "วรรณวนัส",
       "target": 28766.0,
       "currentSales": 0,
-      "previousMonthSales": 30490.0,
-      "lastYearSales": 36800.0,
+      "previousMonthSales": 0,
+      "lastYearSales": 10950.0,
       "targetAchievement": 0.0,
-      "momGrowth": -1.0,
+      "momGrowth": null,
       "yoyGrowth": -1.0
     },
     {
@@ -2468,11 +2482,11 @@
       "am": "วรรณวนัส",
       "target": 158210.0,
       "currentSales": 87780.0,
-      "previousMonthSales": 180770.0,
-      "lastYearSales": 129300.0,
+      "previousMonthSales": 75340.0,
+      "lastYearSales": 98500.0,
       "targetAchievement": 0.554832,
-      "momGrowth": -0.514411,
-      "yoyGrowth": -0.321114
+      "momGrowth": 0.165118,
+      "yoyGrowth": -0.108832
     },
     {
       "storeId": "2318",
@@ -2483,11 +2497,11 @@
       "am": "วรรณวนัส",
       "target": 95187.0,
       "currentSales": 10900.0,
-      "previousMonthSales": 100890.0,
-      "lastYearSales": 55850.0,
+      "previousMonthSales": 22800.0,
+      "lastYearSales": 33050.0,
       "targetAchievement": 0.114511,
-      "momGrowth": -0.891962,
-      "yoyGrowth": -0.804834
+      "momGrowth": -0.52193,
+      "yoyGrowth": -0.670197
     },
     {
       "storeId": "2501",
@@ -2498,11 +2512,11 @@
       "am": "วรรณวนัส",
       "target": 320603.0,
       "currentSales": 78495.0,
-      "previousMonthSales": 366320.0,
-      "lastYearSales": 249150.0,
+      "previousMonthSales": 221580.0,
+      "lastYearSales": 75400.0,
       "targetAchievement": 0.244836,
-      "momGrowth": -0.78572,
-      "yoyGrowth": -0.684949
+      "momGrowth": -0.645749,
+      "yoyGrowth": 0.041048
     },
     {
       "storeId": "2715",
@@ -2513,11 +2527,11 @@
       "am": "วรรณวนัส",
       "target": 201567.0,
       "currentSales": 55500.0,
-      "previousMonthSales": 230310.0,
-      "lastYearSales": 146900.0,
+      "previousMonthSales": 123940.0,
+      "lastYearSales": 57750.0,
       "targetAchievement": 0.275343,
-      "momGrowth": -0.75902,
-      "yoyGrowth": -0.622192
+      "momGrowth": -0.552203,
+      "yoyGrowth": -0.038961
     },
     {
       "storeId": "2797",
@@ -2528,10 +2542,10 @@
       "am": "วรรณวนัส",
       "target": 200876.0,
       "currentSales": 70190.0,
-      "previousMonthSales": 229520.0,
+      "previousMonthSales": 115250.0,
       "lastYearSales": 0,
       "targetAchievement": 0.34942,
-      "momGrowth": -0.694188,
+      "momGrowth": -0.390976,
       "yoyGrowth": null
     },
     {
@@ -2543,10 +2557,10 @@
       "am": "วรรณวนัส",
       "target": 335816.0,
       "currentSales": 127909.0,
-      "previousMonthSales": 394603.0,
+      "previousMonthSales": 180498.0,
       "lastYearSales": 0,
       "targetAchievement": 0.38089,
-      "momGrowth": -0.675854,
+      "momGrowth": -0.291355,
       "yoyGrowth": null
     },
     {
@@ -2558,11 +2572,11 @@
       "am": "วัชราภรณ์",
       "target": 315093.0,
       "currentSales": 195820.0,
-      "previousMonthSales": 360025.0,
-      "lastYearSales": 336500.0,
+      "previousMonthSales": 128800.0,
+      "lastYearSales": 168450.0,
       "targetAchievement": 0.621467,
-      "momGrowth": -0.456093,
-      "yoyGrowth": -0.418068
+      "momGrowth": 0.520342,
+      "yoyGrowth": 0.162481
     },
     {
       "storeId": "543",
@@ -2573,11 +2587,11 @@
       "am": "วัชราภรณ์",
       "target": 1043335.0,
       "currentSales": 389370.0,
-      "previousMonthSales": 1200813.0,
-      "lastYearSales": 891999.0,
+      "previousMonthSales": 466555.0,
+      "lastYearSales": 385050.0,
       "targetAchievement": 0.373197,
-      "momGrowth": -0.675745,
-      "yoyGrowth": -0.563486
+      "momGrowth": -0.165436,
+      "yoyGrowth": 0.011219
     },
     {
       "storeId": "632",
@@ -2588,11 +2602,11 @@
       "am": "วัชราภรณ์",
       "target": 479793.0,
       "currentSales": 233230.0,
-      "previousMonthSales": 548210.0,
-      "lastYearSales": 569650.0,
+      "previousMonthSales": 303690.0,
+      "lastYearSales": 298800.0,
       "targetAchievement": 0.486105,
-      "momGrowth": -0.574561,
-      "yoyGrowth": -0.590573
+      "momGrowth": -0.232013,
+      "yoyGrowth": -0.219444
     },
     {
       "storeId": "633",
@@ -2603,11 +2617,11 @@
       "am": "วัชราภรณ์",
       "target": 2442079.0,
       "currentSales": 778980.0,
-      "previousMonthSales": 2790314.0,
-      "lastYearSales": 2150440.0,
+      "previousMonthSales": 1291784.0,
+      "lastYearSales": 930140.0,
       "targetAchievement": 0.318982,
-      "momGrowth": -0.720827,
-      "yoyGrowth": -0.637758
+      "momGrowth": -0.396973,
+      "yoyGrowth": -0.162513
     },
     {
       "storeId": "676",
@@ -2618,11 +2632,11 @@
       "am": "วัชราภรณ์",
       "target": 581114.0,
       "currentSales": 125170.0,
-      "previousMonthSales": 663980.0,
-      "lastYearSales": 363900.0,
+      "previousMonthSales": 340600.0,
+      "lastYearSales": 191550.0,
       "targetAchievement": 0.215397,
-      "momGrowth": -0.811485,
-      "yoyGrowth": -0.656032
+      "momGrowth": -0.632501,
+      "yoyGrowth": -0.346541
     },
     {
       "storeId": "1110",
@@ -2633,11 +2647,11 @@
       "am": "วัชราภรณ์",
       "target": 251891.0,
       "currentSales": 73990.0,
-      "previousMonthSales": 402070.0,
-      "lastYearSales": 198500.0,
+      "previousMonthSales": 128650.0,
+      "lastYearSales": 81100.0,
       "targetAchievement": 0.293738,
-      "momGrowth": -0.815977,
-      "yoyGrowth": -0.627254
+      "momGrowth": -0.424874,
+      "yoyGrowth": -0.08767
     },
     {
       "storeId": "1563",
@@ -2648,11 +2662,11 @@
       "am": "วัชราภรณ์",
       "target": 388011.0,
       "currentSales": 215100.0,
-      "previousMonthSales": 420489.0,
-      "lastYearSales": 314648.0,
+      "previousMonthSales": 120960.0,
+      "lastYearSales": 158649.0,
       "targetAchievement": 0.554366,
-      "momGrowth": -0.488453,
-      "yoyGrowth": -0.316379
+      "momGrowth": 0.778274,
+      "yoyGrowth": 0.355823
     },
     {
       "storeId": "1567",
@@ -2663,10 +2677,10 @@
       "am": "วัชราภรณ์",
       "target": 52617.0,
       "currentSales": 33700.0,
-      "previousMonthSales": 55770.0,
+      "previousMonthSales": 37180.0,
       "lastYearSales": 0,
       "targetAchievement": 0.640477,
-      "momGrowth": -0.395732,
+      "momGrowth": -0.093599,
       "yoyGrowth": null
     },
     {
@@ -2678,11 +2692,11 @@
       "am": "วัชราภรณ์",
       "target": 366488.0,
       "currentSales": 156870.0,
-      "previousMonthSales": 384470.0,
-      "lastYearSales": 272450.0,
+      "previousMonthSales": 160350.0,
+      "lastYearSales": 85550.0,
       "targetAchievement": 0.428036,
-      "momGrowth": -0.591984,
-      "yoyGrowth": -0.424225
+      "momGrowth": -0.021703,
+      "yoyGrowth": 0.833665
     },
     {
       "storeId": "2553",
@@ -2693,11 +2707,11 @@
       "am": "วัชราภรณ์",
       "target": 242115.0,
       "currentSales": 109790.0,
-      "previousMonthSales": 276640.0,
-      "lastYearSales": 231700.0,
+      "previousMonthSales": 137550.0,
+      "lastYearSales": 129850.0,
       "targetAchievement": 0.453462,
-      "momGrowth": -0.60313,
-      "yoyGrowth": -0.526155
+      "momGrowth": -0.201818,
+      "yoyGrowth": -0.154486
     },
     {
       "storeId": "2618",
@@ -2708,11 +2722,11 @@
       "am": "วัชราภรณ์",
       "target": 433184.0,
       "currentSales": 210430.0,
-      "previousMonthSales": 494955.0,
-      "lastYearSales": 373150.0,
+      "previousMonthSales": 184420.0,
+      "lastYearSales": 155700.0,
       "targetAchievement": 0.485775,
-      "momGrowth": -0.57485,
-      "yoyGrowth": -0.436071
+      "momGrowth": 0.141037,
+      "yoyGrowth": 0.351509
     },
     {
       "storeId": "2678",
@@ -2723,11 +2737,11 @@
       "am": "วัชราภรณ์",
       "target": 230624.0,
       "currentSales": 86260.0,
-      "previousMonthSales": 263510.0,
-      "lastYearSales": 166500.0,
+      "previousMonthSales": 177460.0,
+      "lastYearSales": 63450.0,
       "targetAchievement": 0.374029,
-      "momGrowth": -0.67265,
-      "yoyGrowth": -0.481922
+      "momGrowth": -0.513919,
+      "yoyGrowth": 0.359496
     },
     {
       "storeId": "2713",
@@ -2738,11 +2752,11 @@
       "am": "วัชราภรณ์",
       "target": 171261.0,
       "currentSales": 93470.0,
-      "previousMonthSales": 172830.0,
-      "lastYearSales": 150650.0,
+      "previousMonthSales": 69670.0,
+      "lastYearSales": 97250.0,
       "targetAchievement": 0.545775,
-      "momGrowth": -0.45918,
-      "yoyGrowth": -0.379555
+      "momGrowth": 0.34161,
+      "yoyGrowth": -0.038869
     },
     {
       "storeId": "2762",
@@ -2753,11 +2767,11 @@
       "am": "วัชราภรณ์",
       "target": 64124.0,
       "currentSales": 30490.0,
-      "previousMonthSales": 62790.0,
-      "lastYearSales": 43000.0,
+      "previousMonthSales": 11900.0,
+      "lastYearSales": 25350.0,
       "targetAchievement": 0.475485,
-      "momGrowth": -0.514413,
-      "yoyGrowth": -0.29093
+      "momGrowth": 1.562185,
+      "yoyGrowth": 0.202761
     },
     {
       "storeId": "2974",
@@ -2768,10 +2782,10 @@
       "am": "วัชราภรณ์",
       "target": 184746.0,
       "currentSales": 148530.0,
-      "previousMonthSales": 211090.0,
+      "previousMonthSales": 85990.0,
       "lastYearSales": 0,
       "targetAchievement": 0.803969,
-      "momGrowth": -0.296366,
+      "momGrowth": 0.727294,
       "yoyGrowth": null
     },
     {
@@ -2783,11 +2797,11 @@
       "am": "สมยศ",
       "target": 1311888.0,
       "currentSales": 560053.0,
-      "previousMonthSales": 1518309.0,
-      "lastYearSales": 1242390.0,
+      "previousMonthSales": 785930.0,
+      "lastYearSales": 556700.0,
       "targetAchievement": 0.426906,
-      "momGrowth": -0.631134,
-      "yoyGrowth": -0.549213
+      "momGrowth": -0.287401,
+      "yoyGrowth": 0.006023
     },
     {
       "storeId": "282",
@@ -2798,11 +2812,11 @@
       "am": "สมยศ",
       "target": 225268.0,
       "currentSales": 23490.0,
-      "previousMonthSales": 256615.0,
-      "lastYearSales": 147850.0,
+      "previousMonthSales": 133170.0,
+      "lastYearSales": 115150.0,
       "targetAchievement": 0.104276,
-      "momGrowth": -0.908462,
-      "yoyGrowth": -0.841123
+      "momGrowth": -0.823609,
+      "yoyGrowth": -0.796005
     },
     {
       "storeId": "389",
@@ -2813,11 +2827,11 @@
       "am": "สมยศ",
       "target": 197638.0,
       "currentSales": 69190.0,
-      "previousMonthSales": 225140.0,
-      "lastYearSales": 80350.0,
+      "previousMonthSales": 104450.0,
+      "lastYearSales": 40550.0,
       "targetAchievement": 0.350084,
-      "momGrowth": -0.69268,
-      "yoyGrowth": -0.138892
+      "momGrowth": -0.337578,
+      "yoyGrowth": 0.706289
     },
     {
       "storeId": "412",
@@ -2828,11 +2842,11 @@
       "am": "สมยศ",
       "target": 110162.0,
       "currentSales": 44600.0,
-      "previousMonthSales": 118540.0,
-      "lastYearSales": 152450.0,
+      "previousMonthSales": 82570.0,
+      "lastYearSales": 97050.0,
       "targetAchievement": 0.404858,
-      "momGrowth": -0.623756,
-      "yoyGrowth": -0.707445
+      "momGrowth": -0.459852,
+      "yoyGrowth": -0.540443
     },
     {
       "storeId": "413",
@@ -2843,11 +2857,11 @@
       "am": "สมยศ",
       "target": 492270.0,
       "currentSales": 196575.0,
-      "previousMonthSales": 567970.0,
-      "lastYearSales": 594298.0,
+      "previousMonthSales": 258250.0,
+      "lastYearSales": 303350.0,
       "targetAchievement": 0.399324,
-      "momGrowth": -0.653899,
-      "yoyGrowth": -0.669232
+      "momGrowth": -0.238819,
+      "yoyGrowth": -0.351986
     },
     {
       "storeId": "420",
@@ -2858,11 +2872,11 @@
       "am": "สมยศ",
       "target": 250164.0,
       "currentSales": 140320.0,
-      "previousMonthSales": 284975.0,
-      "lastYearSales": 245100.0,
+      "previousMonthSales": 144800.0,
+      "lastYearSales": 149550.0,
       "targetAchievement": 0.560912,
-      "momGrowth": -0.507606,
-      "yoyGrowth": -0.427499
+      "momGrowth": -0.030939,
+      "yoyGrowth": -0.061718
     },
     {
       "storeId": "586",
@@ -2873,11 +2887,11 @@
       "am": "สมยศ",
       "target": 194427.0,
       "currentSales": 80300.0,
-      "previousMonthSales": 222680.0,
-      "lastYearSales": 257100.0,
+      "previousMonthSales": 66230.0,
+      "lastYearSales": 145050.0,
       "targetAchievement": 0.413008,
-      "momGrowth": -0.639393,
-      "yoyGrowth": -0.68767
+      "momGrowth": 0.212441,
+      "yoyGrowth": -0.446398
     },
     {
       "storeId": "653",
@@ -2888,11 +2902,11 @@
       "am": "สมยศ",
       "target": 847783.0,
       "currentSales": 521560.0,
-      "previousMonthSales": 920050.0,
-      "lastYearSales": 945500.0,
+      "previousMonthSales": 446200.0,
+      "lastYearSales": 414150.0,
       "targetAchievement": 0.615205,
-      "momGrowth": -0.433118,
-      "yoyGrowth": -0.448377
+      "momGrowth": 0.168893,
+      "yoyGrowth": 0.25935
     },
     {
       "storeId": "1484",
@@ -2903,11 +2917,11 @@
       "am": "สมยศ",
       "target": 72484.0,
       "currentSales": 21800.0,
-      "previousMonthSales": 82570.0,
-      "lastYearSales": 69450.0,
+      "previousMonthSales": 40180.0,
+      "lastYearSales": 33850.0,
       "targetAchievement": 0.300756,
-      "momGrowth": -0.735982,
-      "yoyGrowth": -0.686105
+      "momGrowth": -0.457442,
+      "yoyGrowth": -0.355982
     },
     {
       "storeId": "1812",
@@ -2918,11 +2932,11 @@
       "am": "สมยศ",
       "target": 188237.0,
       "currentSales": 131590.0,
-      "previousMonthSales": 214430.0,
-      "lastYearSales": 81250.0,
+      "previousMonthSales": 52290.0,
+      "lastYearSales": 30600.0,
       "targetAchievement": 0.699066,
-      "momGrowth": -0.386327,
-      "yoyGrowth": 0.619569
+      "momGrowth": 1.516542,
+      "yoyGrowth": 3.300327
     },
     {
       "storeId": "2466",
@@ -2933,11 +2947,11 @@
       "am": "สมยศ",
       "target": 425211.0,
       "currentSales": 129400.0,
-      "previousMonthSales": 484380.0,
-      "lastYearSales": 222500.0,
+      "previousMonthSales": 180940.0,
+      "lastYearSales": 110550.0,
       "targetAchievement": 0.30432,
-      "momGrowth": -0.732854,
-      "yoyGrowth": -0.418427
+      "momGrowth": -0.284846,
+      "yoyGrowth": 0.170511
     },
     {
       "storeId": "2522",
@@ -2948,11 +2962,11 @@
       "am": "สมยศ",
       "target": 245209.0,
       "currentSales": 120730.0,
-      "previousMonthSales": 279330.0,
-      "lastYearSales": 144700.0,
+      "previousMonthSales": 91200.0,
+      "lastYearSales": 80150.0,
       "targetAchievement": 0.492356,
-      "momGrowth": -0.567787,
-      "yoyGrowth": -0.165653
+      "momGrowth": 0.323794,
+      "yoyGrowth": 0.506301
     },
     {
       "storeId": "2800",
@@ -2963,11 +2977,11 @@
       "am": "สมยศ",
       "target": 199833.0,
       "currentSales": 68400.0,
-      "previousMonthSales": 227640.0,
-      "lastYearSales": 107950.0,
+      "previousMonthSales": 129150.0,
+      "lastYearSales": 52500.0,
       "targetAchievement": 0.342286,
-      "momGrowth": -0.699526,
-      "yoyGrowth": -0.366373
+      "momGrowth": -0.470383,
+      "yoyGrowth": 0.302857
     }
   ]
 }

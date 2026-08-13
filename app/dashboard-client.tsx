@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type DashboardRow = {
   target_month: string;
@@ -101,6 +101,7 @@ function Delta({ value }: { value: number | null }) {
 }
 
 export function DashboardClient() {
+  const dashboardRef = useRef<HTMLElement>(null);
   const [rows, setRows] = useState<DashboardRow[]>(demoRows);
   const [isDemo, setIsDemo] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -108,6 +109,7 @@ export function DashboardClient() {
   const [am, setAm] = useState("ทั้งหมด");
   const [view, setView] = useState<ViewMode>("stores");
   const [query, setQuery] = useState("");
+  const [snapshotStatus, setSnapshotStatus] = useState<"idle" | "capturing" | "saved" | "error">("idle");
 
   useEffect(() => {
     const controller = new AbortController();
@@ -153,8 +155,68 @@ export function DashboardClient() {
   const yoy = totals.lastYear ? (totals.sales - totals.lastYear) / totals.lastYear : null;
   const title = view === "stores" ? "ผลการดำเนินงานรายร้าน" : view === "rm" ? "อันดับ RM" : "อันดับ AM";
 
+  async function saveSnapshot() {
+    const dashboard = dashboardRef.current;
+    if (!dashboard || snapshotStatus === "capturing") return;
+
+    setSnapshotStatus("capturing");
+    dashboard.classList.add("snapshot-mode");
+    try {
+      await document.fonts.ready;
+      await new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
+      const { toBlob } = await import("html-to-image");
+      const width = dashboard.scrollWidth;
+      const height = dashboard.scrollHeight;
+      const maxPixels = 24_000_000;
+      const safeRatio = Math.sqrt(maxPixels / Math.max(width * height, 1));
+      const pixelRatio = Math.max(.75, Math.min(window.devicePixelRatio || 1, 2, safeRatio));
+      const blob = await toBlob(dashboard, {
+        backgroundColor: "#f4f7f6",
+        cacheBust: true,
+        pixelRatio,
+        width,
+        height,
+        filter: (node) => !(node instanceof HTMLElement && node.dataset.snapshotIgnore === "true"),
+      });
+      if (!blob) throw new Error("Unable to create snapshot");
+
+      const filename = `apple-watch-dashboard-2026-08-12-${view}.png`;
+      const file = new File([blob], filename, { type: "image/png" });
+      const shareData = { files: [file], title: "Apple Watch Performance Dashboard" };
+
+      const isMobileDevice = navigator.maxTouchPoints > 0 || /Android|iPhone|iPad/i.test(navigator.userAgent);
+      if (isMobileDevice && navigator.share && navigator.canShare?.(shareData)) {
+        try {
+          await navigator.share(shareData);
+          setSnapshotStatus("saved");
+          return;
+        } catch (error) {
+          if (error instanceof DOMException && error.name === "AbortError") {
+            setSnapshotStatus("idle");
+            return;
+          }
+        }
+      }
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1_000);
+      setSnapshotStatus("saved");
+    } catch (error) {
+      console.error("Snapshot failed", error);
+      setSnapshotStatus("error");
+    } finally {
+      dashboard.classList.remove("snapshot-mode");
+    }
+  }
+
   return (
-    <main>
+    <main ref={dashboardRef}>
       <header className="hero">
         <div>
           <div className="eyebrow"><span className="watch-dot" /> APPLE WATCH PERFORMANCE</div>
@@ -168,8 +230,17 @@ export function DashboardClient() {
         <label><span>RM</span><select value={rm} onChange={(event) => { setRm(event.target.value); setAm("ทั้งหมด"); }}>{rms.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label><span>AM</span><select value={am} onChange={(event) => setAm(event.target.value)}>{ams.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label className="search"><span>ค้นหาร้าน</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="ชื่อร้าน หรือ ID ร้าน" /></label>
-        <button type="button" className="reset" onClick={() => { setRm("ทั้งหมด"); setAm("ทั้งหมด"); setQuery(""); }}>ล้างตัวกรอง</button>
+        <div className="filter-actions" data-snapshot-ignore="true">
+          <button type="button" className="reset" onClick={() => { setRm("ทั้งหมด"); setAm("ทั้งหมด"); setQuery(""); }}>ล้างตัวกรอง</button>
+          <button type="button" className="snapshot" onClick={saveSnapshot} disabled={snapshotStatus === "capturing"}>
+            <span aria-hidden="true">▣</span> {snapshotStatus === "capturing" ? "กำลังสร้างรูปทั้งหน้า…" : "บันทึกทั้งหน้า"}
+          </button>
+        </div>
       </section>
+
+      <div className={`snapshot-message ${snapshotStatus}`} role="status" aria-live="polite" data-snapshot-ignore="true">
+        {snapshotStatus === "saved" ? "บันทึกรูป Dashboard ทั้งหน้าเรียบร้อยแล้ว" : snapshotStatus === "error" ? "ไม่สามารถบันทึกรูปได้ กรุณาลองใหม่" : ""}
+      </div>
 
       {isDemo && <div className="demo-banner"><strong>โหมดตัวอย่าง</strong> รอสิทธิ์เข้าถึง Google Sheet เพื่อแทนที่ด้วยข้อมูลจริง โดย Target จะแสดงเฉพาะเดือนล่าสุด</div>}
 
