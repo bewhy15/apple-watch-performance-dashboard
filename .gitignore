@@ -32,3 +32,6 @@ yarn-error.log*
 
 # Vercel local metadata
 .vercel
+
+# local pnpm approval state
+pnpm-workspace.yaml
