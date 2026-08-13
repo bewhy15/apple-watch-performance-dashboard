@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type DashboardRow = {
   target_month: string;
@@ -60,6 +60,7 @@ const demoRows: DashboardRow[] = [
 
 const number = new Intl.NumberFormat("th-TH", { maximumFractionDigits: 0 });
 const percent = new Intl.NumberFormat("th-TH", { style: "percent", maximumFractionDigits: 1 });
+const time = new Intl.DateTimeFormat("th-TH", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
 
 function monthLabel(value?: string) {
   if (!value) return "—";
@@ -110,24 +111,45 @@ export function DashboardClient() {
   const [view, setView] = useState<ViewMode>("stores");
   const [query, setQuery] = useState("");
   const [snapshotStatus, setSnapshotStatus] = useState<"idle" | "capturing" | "saved" | "error">("idle");
+  const [refreshStatus, setRefreshStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [lastRefreshedAt, setLastRefreshedAt] = useState<Date | null>(null);
+
+  const loadDashboardRows = useCallback(async (signal?: AbortSignal) => {
+    setLoading(true);
+    setRefreshStatus("loading");
+    try {
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/aw_dashboard_rows?select=*&order=target_attainment.desc.nullslast`, {
+        headers: { apikey: SUPABASE_KEY, "Cache-Control": "no-cache" },
+        cache: "no-store",
+        signal,
+      });
+      if (!response.ok) throw new Error("fetch failed");
+
+      const data = await response.json() as DashboardRow[];
+      if (!data.length) throw new Error("empty dashboard data");
+
+      setRows(data.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, typeof value === "string" && !["target_month", "sales_month", "store_id", "store_name", "rm", "am"].includes(key) ? Number(value) : value])) as DashboardRow));
+      setIsDemo(false);
+      setLastRefreshedAt(new Date());
+      setRefreshStatus("success");
+    } catch (error) {
+      if (error instanceof DOMException && error.name === "AbortError") return;
+      setRefreshStatus("error");
+    } finally {
+      if (!signal?.aborted) setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`${SUPABASE_URL}/rest/v1/aw_dashboard_rows?select=*&order=target_attainment.desc.nullslast`, {
-      headers: { apikey: SUPABASE_KEY },
-      signal: controller.signal,
-    })
-      .then((response) => (response.ok ? response.json() : Promise.reject(new Error("fetch failed"))))
-      .then((data: DashboardRow[]) => {
-        if (data.length) {
-          setRows(data.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, typeof value === "string" && !["target_month", "sales_month", "store_id", "store_name", "rm", "am"].includes(key) ? Number(value) : value])) as DashboardRow));
-          setIsDemo(false);
-        }
-      })
-      .catch(() => undefined)
-      .finally(() => setLoading(false));
-    return () => controller.abort();
-  }, []);
+    const initialRefresh = window.setTimeout(() => void loadDashboardRows(controller.signal), 0);
+    const refreshInterval = window.setInterval(() => void loadDashboardRows(), 15 * 60 * 1_000);
+    return () => {
+      controller.abort();
+      window.clearTimeout(initialRefresh);
+      window.clearInterval(refreshInterval);
+    };
+  }, [loadDashboardRows]);
 
   const rms = useMemo(() => ["ทั้งหมด", ...new Set(rows.map((row) => row.rm).filter(Boolean))], [rows]);
   const ams = useMemo(() => ["ทั้งหมด", ...new Set(rows.filter((row) => rm === "ทั้งหมด" || row.rm === rm).map((row) => row.am).filter(Boolean))], [rows, rm]);
@@ -232,12 +254,18 @@ export function DashboardClient() {
         <label className="search"><span>ค้นหาร้าน</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="ชื่อร้าน หรือ ID ร้าน" /></label>
         <div className="filter-actions" data-snapshot-ignore="true">
           <button type="button" className="reset" onClick={() => { setRm("ทั้งหมด"); setAm("ทั้งหมด"); setQuery(""); }}>ล้างตัวกรอง</button>
+          <button type="button" className="refresh" onClick={() => void loadDashboardRows()} disabled={loading || snapshotStatus === "capturing"}>
+            <span aria-hidden="true">↻</span> {loading ? "กำลังรีเฟรช…" : "รีเฟรชข้อมูล"}
+          </button>
           <button type="button" className="snapshot" onClick={saveSnapshot} disabled={snapshotStatus === "capturing"}>
             <span aria-hidden="true">▣</span> {snapshotStatus === "capturing" ? "กำลังสร้างรูปทั้งหน้า…" : "บันทึกทั้งหน้า"}
           </button>
         </div>
       </section>
 
+      <div className={`refresh-message ${refreshStatus}`} role="status" aria-live="polite" data-snapshot-ignore="true">
+        {refreshStatus === "success" && lastRefreshedAt ? `ดึงข้อมูลล่าสุดแล้ว · ${time.format(lastRefreshedAt)} น. · อัปเดตอัตโนมัติทุก 15 นาที` : refreshStatus === "error" ? "ดึงข้อมูลไม่สำเร็จ กรุณาลองอีกครั้ง" : "อัปเดตอัตโนมัติทุก 15 นาที"}
+      </div>
       <div className={`snapshot-message ${snapshotStatus}`} role="status" aria-live="polite" data-snapshot-ignore="true">
         {snapshotStatus === "saved" ? "บันทึกรูป Dashboard ทั้งหน้าเรียบร้อยแล้ว" : snapshotStatus === "error" ? "ไม่สามารถบันทึกรูปได้ กรุณาลองใหม่" : ""}
       </div>
