@@ -142,7 +142,13 @@ Deno.serve(async (request: Request) => {
     if (!currentCount) throw new Error("Current sheet has no dated rows");
 
     const [rawTargets, currentDateTail] = await Promise.all([
-      querySheet(SHEETS.target, `select B,C,E,F,G where A = ${targetPeriod}`),
+      querySheet(SHEETS.target, `select B,C,D,E,F,G,H where A = ${targetPeriod}`)
+        .catch((error) => {
+          if (error instanceof Error && error.message.includes("NO_COLUMN: H")) {
+            return querySheet(SHEETS.target, `select B,C,D,E,F,G where A = ${targetPeriod}`);
+          }
+          throw error;
+        }),
       querySheet(SHEETS.current, `select R offset ${Math.max(0, currentCount - 2_000)}`),
     ]);
 
@@ -168,13 +174,15 @@ Deno.serve(async (request: Request) => {
       const rawStoreId = cell(row, 0);
       if (rawStoreId === null || rawStoreId === "") return [];
       const storeId = String(rawStoreId).replace(/,/g, "").replace(/\.0$/, "").trim();
-      const target = Number(cell(row, 4) ?? 0);
+      const hasChannelColumn = cell(row, 6) !== null && Number.isFinite(Number(cell(row, 6)));
+      const target = Number(cell(row, hasChannelColumn ? 6 : 5) ?? 0);
       if (!storeId || !Number.isFinite(target)) return [];
       return [{
         store_id: storeId,
         store_name: String(cell(row, 1) ?? "").trim(),
-        rm: String(cell(row, 2) ?? "").trim(),
-        am: String(cell(row, 3) ?? "").trim(),
+        channel: hasChannelColumn ? String(cell(row, 3) ?? "").trim() : "",
+        rm: String(cell(row, hasChannelColumn ? 4 : 3) ?? "").trim(),
+        am: String(cell(row, hasChannelColumn ? 5 : 4) ?? "").trim(),
         target,
       }];
     });
@@ -192,7 +200,7 @@ Deno.serve(async (request: Request) => {
       p_last_year: salesRows(rawLastYear),
     };
 
-    const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/sync_aw_dashboard_from_sheet`, {
+    const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/sync_aw_dashboard_from_sheet_v2`, {
       method: "POST",
       headers: {
         apikey: serviceRoleKey,

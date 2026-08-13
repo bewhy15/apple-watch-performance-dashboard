@@ -9,6 +9,7 @@ type DashboardRow = {
   sheet_synced_at?: string;
   store_id: string;
   store_name: string;
+  channel: string;
   rm: string;
   am: string;
   target: number;
@@ -51,6 +52,7 @@ const demoRows: DashboardRow[] = [
     sales_month: "2026-08-01",
     store_id: String(store_id),
     store_name: String(store_name),
+    channel: "AAR",
     rm: String(rm),
     am: String(am),
     target: t,
@@ -88,7 +90,7 @@ function calculateForecast(sales: number, dataThroughDate?: string) {
   return elapsedDays ? sales / elapsedDays * daysInMonth : 0;
 }
 
-function aggregate(rows: DashboardRow[], key: "rm" | "am") {
+function aggregate(rows: DashboardRow[], key: "channel" | "rm" | "am") {
   const groups = new Map<string, DashboardRow>();
   rows.forEach((row) => {
     const name = row[key] || "ไม่ระบุ";
@@ -126,22 +128,25 @@ function Delta({ value }: { value: number | null }) {
   return <span className={positive ? "delta positive" : "delta negative"} aria-label={`${positive ? "เพิ่มขึ้น" : "ลดลง"} ${percent.format(Math.abs(value))}`}>{positive ? "↑" : "↓"} {percent.format(Math.abs(value))}</span>;
 }
 
-function TeamRankingTable({ kind, rows, sourceRows }: { kind: "rm" | "am"; rows: DashboardRow[]; sourceRows: DashboardRow[] }) {
+function TeamRankingTable({ kind, rows, sourceRows }: { kind: "channel" | "rm" | "am"; rows: DashboardRow[]; sourceRows: DashboardRow[] }) {
+  const sectionLabel = kind === "channel" ? "รูปแบบสาขา (Channel)" : kind.toUpperCase();
   return (
     <section className="team-section" aria-labelledby={`${kind}-ranking-title`}>
       <div className="team-section-title">
-        <h2 id={`${kind}-ranking-title`}>อันดับ {kind.toUpperCase()}</h2>
-        <span>{rows.length} {kind.toUpperCase()}</span>
+        <h2 id={`${kind}-ranking-title`}>อันดับ {sectionLabel}</h2>
+        <span>{rows.length} {kind === "channel" ? "รูปแบบ" : kind.toUpperCase()}</span>
       </div>
-      <div className="table-wrap" role="region" aria-label={`ตารางอันดับ ${kind.toUpperCase()}`}>
+      <div className="table-wrap" role="region" aria-label={`ตารางอันดับ ${sectionLabel}`}>
         <table className="team-table">
-          <caption className="sr-only">อันดับ {kind.toUpperCase()} เปรียบเทียบ Target ยอดขาย Forecast MoM และ YoY</caption>
-          <thead><tr><th scope="col">อันดับ</th><th scope="col">{kind.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">%AC</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
+          <caption className="sr-only">อันดับ {sectionLabel} เปรียบเทียบ Target ยอดขาย Forecast MoM และ YoY</caption>
+          <thead><tr><th scope="col">อันดับ</th><th scope="col">{sectionLabel}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">%AC</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
           <tbody>{rows.map((row, index) => {
             const attainment = row.target_attainment ?? 0;
-            const memberText = kind === "rm"
-              ? `${new Set(sourceRows.filter((item) => item.rm === row.store_name).map((item) => item.am).filter(Boolean)).size} AM`
-              : `RM ${row.rm}`;
+            const memberText = kind === "channel"
+              ? `${sourceRows.filter((item) => item.channel === row.store_name).length} สาขา`
+              : kind === "rm"
+                ? `${new Set(sourceRows.filter((item) => item.rm === row.store_name).map((item) => item.am).filter(Boolean)).size} AM`
+                : `RM ${row.rm}`;
             return <tr key={`${kind}-${row.store_id}`}>
               <td><span className={`rank rank-${index + 1}`}>{index + 1}</span></td>
               <td><div className="store-name">{row.store_name}</div><div className="store-meta">{memberText}</div></td>
@@ -188,7 +193,7 @@ export function DashboardClient() {
       const data = await response.json() as DashboardRow[];
       if (!data.length) throw new Error("empty dashboard data");
 
-      setRows(data.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, typeof value === "string" && !["target_month", "sales_month", "data_through_date", "sheet_synced_at", "store_id", "store_name", "rm", "am"].includes(key) ? Number(value) : value])) as DashboardRow));
+      setRows(data.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, typeof value === "string" && !["target_month", "sales_month", "data_through_date", "sheet_synced_at", "store_id", "store_name", "channel", "rm", "am"].includes(key) ? Number(value) : value])) as DashboardRow));
       setIsDemo(false);
       setLastRefreshedAt(new Date());
       setRefreshStatus("success");
@@ -241,6 +246,7 @@ export function DashboardClient() {
   const title = view === "stores" ? "ผลการดำเนินงานรายร้าน" : view === "rm" ? "อันดับ RM" : "อันดับ AM";
   const rmRanking = useMemo(() => aggregate(filtered, "rm").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
   const amRanking = useMemo(() => aggregate(filtered, "am").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
+  const channelRanking = useMemo(() => aggregate(filtered, "channel").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
 
   async function saveSnapshot() {
     const dashboard = dashboardRef.current;
@@ -384,6 +390,7 @@ export function DashboardClient() {
         </div>
       </section></> : <section className="teams-report">
         <div className="teams-report-head"><div><p>RM &amp; AM PERFORMANCE</p><h1>ภาพรวม RM และ AM</h1></div><span>เรียงตาม %AC สูงสุด · ข้อมูลถึง {dateLabel(dataThroughDate)}</span></div>
+        <TeamRankingTable kind="channel" rows={channelRanking} sourceRows={filtered} />
         <TeamRankingTable kind="rm" rows={rmRanking} sourceRows={filtered} />
         <TeamRankingTable kind="am" rows={amRanking} sourceRows={filtered} />
       </section>}
