@@ -246,7 +246,9 @@ export function DashboardClient() {
   const title = view === "stores" ? "ผลการดำเนินงานรายร้าน" : view === "rm" ? "อันดับ RM" : "อันดับ AM";
   const rmRanking = useMemo(() => aggregate(filtered, "rm").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
   const amRanking = useMemo(() => aggregate(filtered, "am").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
-  const channelRanking = useMemo(() => aggregate(filtered, "channel").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
+  const channelRanking = useMemo(() => aggregate(filtered, "channel")
+    .filter((row) => row.store_name !== "ไม่ระบุ")
+    .sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
 
   async function saveSnapshot() {
     const dashboard = dashboardRef.current;
