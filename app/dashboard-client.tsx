@@ -5,6 +5,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 type DashboardRow = {
   target_month: string;
   sales_month: string;
+  data_through_date?: string;
+  sheet_synced_at?: string;
   store_id: string;
   store_name: string;
   rm: string;
@@ -16,9 +18,12 @@ type DashboardRow = {
   target_attainment: number | null;
   mom: number | null;
   yoy: number | null;
+  forecast?: number | null;
+  forecast_attainment?: number | null;
 };
 
 type ViewMode = "stores" | "rm" | "am";
+type PageMode = "performance" | "teams";
 
 const SUPABASE_URL = "https://qoazkcserdyczckvhakt.supabase.co";
 const SUPABASE_KEY = "sb_publishable_U5bdVQgH0jZdb-phJoljdA_XHbY2oA2";
@@ -55,6 +60,9 @@ const demoRows: DashboardRow[] = [
     target_attainment: t ? c / t : null,
     mom: p ? (c - p) / p : null,
     yoy: y ? (c - y) / y : null,
+    data_through_date: "2026-08-12",
+    forecast: c / 12 * 31,
+    forecast_attainment: t ? (c / 12 * 31) / t : null,
   };
 });
 
@@ -65,6 +73,19 @@ const time = new Intl.DateTimeFormat("th-TH", { hour: "2-digit", minute: "2-digi
 function monthLabel(value?: string) {
   if (!value) return "—";
   return new Intl.DateTimeFormat("th-TH", { month: "long", year: "numeric" }).format(new Date(`${value.slice(0, 10)}T00:00:00`));
+}
+
+function dateLabel(value?: string) {
+  if (!value) return "—";
+  return new Intl.DateTimeFormat("th-TH", { day: "numeric", month: "short", year: "numeric" }).format(new Date(`${value.slice(0, 10)}T00:00:00`));
+}
+
+function calculateForecast(sales: number, dataThroughDate?: string) {
+  if (!dataThroughDate) return 0;
+  const date = new Date(`${dataThroughDate.slice(0, 10)}T00:00:00`);
+  const elapsedDays = date.getDate();
+  const daysInMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+  return elapsedDays ? sales / elapsedDays * daysInMonth : 0;
 }
 
 function aggregate(rows: DashboardRow[], key: "rm" | "am") {
@@ -82,6 +103,8 @@ function aggregate(rows: DashboardRow[], key: "rm" | "am") {
       target_attainment: null,
       mom: null,
       yoy: null,
+      forecast: 0,
+      forecast_attainment: null,
     };
     current.target += row.target;
     current.current_sales += row.current_sales;
@@ -90,6 +113,8 @@ function aggregate(rows: DashboardRow[], key: "rm" | "am") {
     current.target_attainment = current.target ? current.current_sales / current.target : null;
     current.mom = current.previous_sales ? (current.current_sales - current.previous_sales) / current.previous_sales : null;
     current.yoy = current.last_year_sales ? (current.current_sales - current.last_year_sales) / current.last_year_sales : null;
+    current.forecast = calculateForecast(current.current_sales, row.data_through_date);
+    current.forecast_attainment = current.target ? (current.forecast ?? 0) / current.target : null;
     groups.set(name, current);
   });
   return [...groups.values()];
@@ -101,6 +126,40 @@ function Delta({ value }: { value: number | null }) {
   return <span className={positive ? "delta positive" : "delta negative"} aria-label={`${positive ? "เพิ่มขึ้น" : "ลดลง"} ${percent.format(Math.abs(value))}`}>{positive ? "↑" : "↓"} {percent.format(Math.abs(value))}</span>;
 }
 
+function TeamRankingTable({ kind, rows, sourceRows }: { kind: "rm" | "am"; rows: DashboardRow[]; sourceRows: DashboardRow[] }) {
+  return (
+    <section className="team-section" aria-labelledby={`${kind}-ranking-title`}>
+      <div className="team-section-title">
+        <h2 id={`${kind}-ranking-title`}>อันดับ {kind.toUpperCase()}</h2>
+        <span>{rows.length} {kind.toUpperCase()}</span>
+      </div>
+      <div className="table-wrap" role="region" aria-label={`ตารางอันดับ ${kind.toUpperCase()}`}>
+        <table className="team-table">
+          <caption className="sr-only">อันดับ {kind.toUpperCase()} เปรียบเทียบ Target ยอดขาย Forecast MoM และ YoY</caption>
+          <thead><tr><th scope="col">อันดับ</th><th scope="col">{kind.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">% Target</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
+          <tbody>{rows.map((row, index) => {
+            const attainment = row.target_attainment ?? 0;
+            const memberText = kind === "rm"
+              ? `${new Set(sourceRows.filter((item) => item.rm === row.store_name).map((item) => item.am).filter(Boolean)).size} AM`
+              : `RM ${row.rm}`;
+            return <tr key={`${kind}-${row.store_id}`}>
+              <td><span className={`rank rank-${index + 1}`}>{index + 1}</span></td>
+              <td><div className="store-name">{row.store_name}</div><div className="store-meta">{memberText}</div></td>
+              <td>{number.format(row.target)}</td>
+              <td className="sales">{number.format(row.current_sales)}</td>
+              <td><div className={attainment >= 1 ? "attain good" : attainment >= .75 ? "attain warn" : "attain low"}><b>{percent.format(attainment)}</b><div><i style={{ width: `${Math.min(attainment * 100, 100)}%` }} /></div></div></td>
+              <td>{number.format(row.forecast ?? 0)}</td>
+              <td><b className={(row.forecast_attainment ?? 0) >= 1 ? "done" : "remaining"}>{row.forecast_attainment === null || row.forecast_attainment === undefined ? "—" : percent.format(row.forecast_attainment)}</b></td>
+              <td><Delta value={row.mom} /></td>
+              <td><Delta value={row.yoy} /></td>
+            </tr>;
+          })}</tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 export function DashboardClient() {
   const dashboardRef = useRef<HTMLElement>(null);
   const [rows, setRows] = useState<DashboardRow[]>(demoRows);
@@ -109,6 +168,7 @@ export function DashboardClient() {
   const [rm, setRm] = useState("ทั้งหมด");
   const [am, setAm] = useState("ทั้งหมด");
   const [view, setView] = useState<ViewMode>("stores");
+  const [page, setPage] = useState<PageMode>("performance");
   const [query, setQuery] = useState("");
   const [snapshotStatus, setSnapshotStatus] = useState<"idle" | "capturing" | "saved" | "error">("idle");
   const [refreshStatus, setRefreshStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -128,7 +188,7 @@ export function DashboardClient() {
       const data = await response.json() as DashboardRow[];
       if (!data.length) throw new Error("empty dashboard data");
 
-      setRows(data.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, typeof value === "string" && !["target_month", "sales_month", "store_id", "store_name", "rm", "am"].includes(key) ? Number(value) : value])) as DashboardRow));
+      setRows(data.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, typeof value === "string" && !["target_month", "sales_month", "data_through_date", "sheet_synced_at", "store_id", "store_name", "rm", "am"].includes(key) ? Number(value) : value])) as DashboardRow));
       setIsDemo(false);
       setLastRefreshedAt(new Date());
       setRefreshStatus("success");
@@ -175,7 +235,12 @@ export function DashboardClient() {
   const targetRate = totals.target ? totals.sales / totals.target : null;
   const mom = totals.previous ? (totals.sales - totals.previous) / totals.previous : null;
   const yoy = totals.lastYear ? (totals.sales - totals.lastYear) / totals.lastYear : null;
+  const dataThroughDate = rows[0]?.data_through_date;
+  const forecast = calculateForecast(totals.sales, dataThroughDate);
+  const forecastRate = totals.target ? forecast / totals.target : null;
   const title = view === "stores" ? "ผลการดำเนินงานรายร้าน" : view === "rm" ? "อันดับ RM" : "อันดับ AM";
+  const rmRanking = useMemo(() => aggregate(filtered, "rm").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
+  const amRanking = useMemo(() => aggregate(filtered, "am").sort((a, b) => (b.target_attainment ?? -1) - (a.target_attainment ?? -1)), [filtered]);
 
   async function saveSnapshot() {
     const dashboard = dashboardRef.current;
@@ -202,7 +267,7 @@ export function DashboardClient() {
       });
       if (!blob) throw new Error("Unable to create snapshot");
 
-      const filename = `apple-watch-dashboard-2026-08-12-${view}.png`;
+      const filename = `apple-watch-dashboard-${dataThroughDate ?? "latest"}-${page === "teams" ? "rm-am" : view}.png`;
       const file = new File([blob], filename, { type: "image/png" });
       const shareData = { files: [file], title: "Apple Watch Performance Dashboard" };
 
@@ -243,10 +308,15 @@ export function DashboardClient() {
         <div>
           <div className="eyebrow"><span className="watch-dot" /> APPLE WATCH PERFORMANCE</div>
           <h1>Target • MoM • YoY</h1>
-          <p>ภาพรวมยอดขาย Apple Watch · 1–12 สิงหาคม 2569</p>
+          <p>ภาพรวมยอดขาย Apple Watch · ข้อมูลถึง {dateLabel(dataThroughDate)}</p>
         </div>
-        <div className="hero-status" role="status" aria-live="polite"><span className={loading ? "pulse" : "status-dot"} aria-hidden="true" />{loading ? "กำลังอัปเดต" : "ข้อมูลถึงวันที่"}<strong>{loading ? "โปรดรอสักครู่" : "12 ส.ค. 2569"}</strong></div>
+        <div className="hero-status" role="status" aria-live="polite"><span className={loading ? "pulse" : "status-dot"} aria-hidden="true" />{loading ? "กำลังอัปเดต" : "ข้อมูลถึงวันที่"}<strong>{loading ? "โปรดรอสักครู่" : dateLabel(dataThroughDate)}</strong></div>
       </header>
+
+      <nav className="page-nav" aria-label="เลือกหน้า Dashboard" data-snapshot-ignore="true">
+        <button type="button" className={page === "performance" ? "active" : ""} aria-current={page === "performance" ? "page" : undefined} onClick={() => setPage("performance")}>Dashboard หลัก</button>
+        <button type="button" className={page === "teams" ? "active" : ""} aria-current={page === "teams" ? "page" : undefined} onClick={() => setPage("teams")}>ภาพรวม RM &amp; AM</button>
+      </nav>
 
       <section className="filters" aria-label="ตัวกรองรายงาน">
         <label><span>RM</span><select value={rm} onChange={(event) => { setRm(event.target.value); setAm("ทั้งหมด"); }}>{rms.map((item) => <option key={item}>{item}</option>)}</select></label>
@@ -272,12 +342,14 @@ export function DashboardClient() {
 
       {isDemo && <div className="demo-banner"><strong>โหมดตัวอย่าง</strong> รอสิทธิ์เข้าถึง Google Sheet เพื่อแทนที่ด้วยข้อมูลจริง โดย Target จะแสดงเฉพาะเดือนล่าสุด</div>}
 
-      <section className="kpis">
+      {page === "performance" ? <><section className="kpis">
         <article><span>Target เดือนล่าสุด</span><strong>{number.format(totals.target)}</strong><small>{monthLabel(rows[0]?.target_month)}</small></article>
         <article><span>ยอดขายเดือนนี้</span><strong>{number.format(totals.sales)}</strong><small>{filtered.length} ร้าน</small></article>
         <article className="accent"><span>เทียบ Target</span><strong>{targetRate === null ? "—" : percent.format(targetRate)}</strong><div className="progress"><i style={{ width: `${Math.min((targetRate ?? 0) * 100, 100)}%` }} /></div></article>
         <article><span>MoM</span><strong><Delta value={mom} /></strong><small>เทียบเดือนก่อน</small></article>
         <article><span>YoY</span><strong><Delta value={yoy} /></strong><small>เทียบเดือนเดียวกันปีก่อน</small></article>
+        <article><span>Forecast ปิดเดือน</span><strong>{number.format(forecast)}</strong><small>จาก Pace ถึง {dateLabel(dataThroughDate)}</small></article>
+        <article className={forecastRate !== null && forecastRate >= 1 ? "forecast-good" : "forecast-risk"}><span>% Forecast</span><strong>{forecastRate === null ? "—" : percent.format(forecastRate)}</strong><small>Forecast เทียบ Target</small></article>
       </section>
 
       <section className="report">
@@ -292,7 +364,7 @@ export function DashboardClient() {
         <div className="table-wrap" id="performance-table" role="tabpanel" tabIndex={0} aria-label={title}>
           <table>
             <caption className="sr-only">{title} เปรียบเทียบเป้าหมาย ยอดขาย MoM และ YoY</caption>
-            <thead><tr><th scope="col">#</th><th scope="col">{view === "stores" ? "ร้านค้า" : view.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">% Target</th><th scope="col">ต้องทำอีก</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
+            <thead><tr><th scope="col">#</th><th scope="col">{view === "stores" ? "ร้านค้า" : view.toUpperCase()}</th><th scope="col">Target</th><th scope="col">ยอดขาย</th><th scope="col">% Target</th><th scope="col">Forecast</th><th scope="col">% Forecast</th><th scope="col">ต้องทำอีก</th><th scope="col">MoM</th><th scope="col">YoY</th></tr></thead>
             <tbody>{visible.map((row, index) => {
               const attainment = row.target_attainment ?? 0;
               return <tr key={row.store_id}>
@@ -301,14 +373,20 @@ export function DashboardClient() {
                 <td>{number.format(row.target)}</td>
                 <td className="sales">{number.format(row.current_sales)}</td>
                 <td><div className={attainment >= 1 ? "attain good" : attainment >= .75 ? "attain warn" : "attain low"}><b>{percent.format(attainment)}</b><div><i style={{ width: `${Math.min(attainment * 100, 100)}%` }} /></div></div></td>
+                <td>{number.format(row.forecast ?? calculateForecast(row.current_sales, row.data_through_date))}</td>
+                <td><b className={(row.forecast_attainment ?? 0) >= 1 ? "done" : "remaining"}>{row.forecast_attainment === null || row.forecast_attainment === undefined ? "—" : percent.format(row.forecast_attainment)}</b></td>
                 <td><b className={row.current_sales >= row.target ? "done" : "remaining"}>{row.current_sales >= row.target ? "ถึงเป้า" : number.format(row.target - row.current_sales)}</b></td>
                 <td><Delta value={row.mom} /></td>
                 <td><Delta value={row.yoy} /></td>
               </tr>;
-            })}{visible.length === 0 ? <tr><td className="empty-state" colSpan={8}>ไม่พบข้อมูลที่ตรงกับตัวกรอง ลองเปลี่ยน RM, AM หรือคำค้นหา</td></tr> : null}</tbody>
+            })}{visible.length === 0 ? <tr><td className="empty-state" colSpan={10}>ไม่พบข้อมูลที่ตรงกับตัวกรอง ลองเปลี่ยน RM, AM หรือคำค้นหา</td></tr> : null}</tbody>
           </table>
         </div>
-      </section>
+      </section></> : <section className="teams-report">
+        <div className="teams-report-head"><div><p>RM &amp; AM PERFORMANCE</p><h1>ภาพรวม RM และ AM</h1></div><span>เรียงตาม % Target สูงสุด · ข้อมูลถึง {dateLabel(dataThroughDate)}</span></div>
+        <TeamRankingTable kind="rm" rows={rmRanking} sourceRows={filtered} />
+        <TeamRankingTable kind="am" rows={amRanking} sourceRows={filtered} />
+      </section>}
       <footer>Apple Watch Dashboard · Target ล่าสุดเท่านั้น · อัปเดตจาก Google Sheet ผ่าน Supabase</footer>
     </main>
   );
