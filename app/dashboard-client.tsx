@@ -208,7 +208,7 @@ export function DashboardClient() {
   useEffect(() => {
     const controller = new AbortController();
     const initialRefresh = window.setTimeout(() => void loadDashboardRows(controller.signal), 0);
-    const refreshInterval = window.setInterval(() => void loadDashboardRows(), 15 * 60 * 1_000);
+    const refreshInterval = window.setInterval(() => void loadDashboardRows(), 60 * 1_000);
     return () => {
       controller.abort();
       window.clearTimeout(initialRefresh);
@@ -241,6 +241,7 @@ export function DashboardClient() {
   const mom = totals.previous ? (totals.sales - totals.previous) / totals.previous : null;
   const yoy = totals.lastYear ? (totals.sales - totals.lastYear) / totals.lastYear : null;
   const dataThroughDate = rows[0]?.data_through_date;
+  const sheetSyncedAt = rows[0]?.sheet_synced_at ? new Date(rows[0].sheet_synced_at) : null;
   const forecast = calculateForecast(totals.sales, dataThroughDate);
   const forecastRate = totals.target ? forecast / totals.target : null;
   const title = view === "stores" ? "ผลการดำเนินงานรายร้าน" : view === "rm" ? "อันดับ RM" : "อันดับ AM";
@@ -342,7 +343,7 @@ export function DashboardClient() {
       </section>
 
       <div className={`refresh-message ${refreshStatus}`} role="status" aria-live="polite" data-snapshot-ignore="true">
-        {refreshStatus === "success" && lastRefreshedAt ? `ดึงข้อมูลล่าสุดแล้ว · ${time.format(lastRefreshedAt)} น. · อัปเดตอัตโนมัติทุก 15 นาที` : refreshStatus === "error" ? "ดึงข้อมูลไม่สำเร็จ กรุณาลองอีกครั้ง" : "อัปเดตอัตโนมัติทุก 15 นาที"}
+        {refreshStatus === "success" && lastRefreshedAt ? `Sheet ซิงก์ล่าสุด ${sheetSyncedAt ? `${time.format(sheetSyncedAt)} น.` : "แล้ว"} · ตรวจหน้าจอ ${time.format(lastRefreshedAt)} น. · อัตโนมัติทุก 1 นาที` : refreshStatus === "error" ? "ดึงข้อมูลไม่สำเร็จ กรุณาลองอีกครั้ง" : "Supabase ดึง Google Sheet ทุก 5 นาที · หน้าเว็บตรวจใหม่ทุก 1 นาที"}
       </div>
       <div className={`snapshot-message ${snapshotStatus}`} role="status" aria-live="polite" data-snapshot-ignore="true">
         {snapshotStatus === "saved" ? "บันทึกรูป Dashboard ทั้งหน้าเรียบร้อยแล้ว" : snapshotStatus === "error" ? "ไม่สามารถบันทึกรูปได้ กรุณาลองใหม่" : ""}

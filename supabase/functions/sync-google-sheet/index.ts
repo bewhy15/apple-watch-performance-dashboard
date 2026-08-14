@@ -44,8 +44,8 @@ async function querySheet(sheet: string, query: string) {
   return payload.table?.rows ?? [];
 }
 
-function cell(row: { c?: GvizCell[] }, index: number) {
-  return row.c?.[index]?.v ?? null;
+function cell(row: { c?: GvizCell[] } | undefined, index: number) {
+  return row?.c?.[index]?.v ?? null;
 }
 
 function monthStart(year: number, month: number) {
@@ -57,17 +57,6 @@ function shiftMonth(year: number, month: number, delta: number) {
   return { year: date.getUTCFullYear(), month: date.getUTCMonth() + 1 };
 }
 
-function parseThaiDate(value: unknown) {
-  const match = String(value ?? "").match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
-  if (!match) return null;
-  const day = Number(match[1]);
-  const month = Number(match[2]);
-  const buddhistYear = Number(match[3]);
-  const year = buddhistYear > 2400 ? buddhistYear - 543 : buddhistYear;
-  if (!day || month < 1 || month > 12 || year < 2000) return null;
-  return { day, month, year, iso: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}` };
-}
-
 function dateWindowQuery(day: number, month: number, year: number) {
   const buddhistYear = year + 543;
   const predicates = Array.from({ length: day }, (_, index) => {
@@ -75,6 +64,27 @@ function dateWindowQuery(day: number, month: number, year: number) {
     return `R contains '${date}'`;
   });
   return `select N,sum(D) where ${predicates.join(" or ")} group by N`;
+}
+
+async function findLatestSalesDate(year: number, month: number) {
+  const bangkokNow = new Date(Date.now() + 7 * 60 * 60 * 1_000);
+  const isCurrentMonth = bangkokNow.getUTCFullYear() === year && bangkokNow.getUTCMonth() + 1 === month;
+  const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+  const startDay = isCurrentMonth ? Math.min(bangkokNow.getUTCDate(), daysInMonth) : daysInMonth;
+  const buddhistYear = year + 543;
+
+  // Doc Date is stored as Thai text, so max(R) sorts alphabetically instead of
+  // chronologically. Probe newest-to-oldest; in normal daily use this is 1-2
+  // small aggregate requests and is reliable even when the sheet has blank rows.
+  for (let day = startDay; day >= 1; day -= 1) {
+    const date = `${String(day).padStart(2, "0")}/${String(month).padStart(2, "0")}/${buddhistYear}`;
+    const rows = await querySheet(SHEETS.current, `select count(R) where R contains '${date}'`);
+    if (Number(cell(rows[0], 0) ?? 0) > 0) {
+      return { day, month, year, iso: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}` };
+    }
+  }
+
+  return null;
 }
 
 function salesRows(rows: Array<{ c?: GvizCell[] }>) {
@@ -129,19 +139,14 @@ Deno.serve(async (request: Request) => {
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
     if (!supabaseUrl || !serviceRoleKey) throw new Error("Supabase environment is not configured");
 
-    const [targetMonthRows, currentCountRows] = await Promise.all([
-      querySheet(SHEETS.target, "select max(A)"),
-      querySheet(SHEETS.current, "select count(R)"),
-    ]);
+    const targetMonthRows = await querySheet(SHEETS.target, "select max(A)");
 
     const targetPeriod = String(Math.trunc(Number(cell(targetMonthRows[0], 0))));
     if (!/^\d{6}$/.test(targetPeriod)) throw new Error("Target month is missing or invalid");
     const targetYear = Number(targetPeriod.slice(0, 4));
     const targetMonth = Number(targetPeriod.slice(4, 6));
-    const currentCount = Math.trunc(Number(cell(currentCountRows[0], 0)));
-    if (!currentCount) throw new Error("Current sheet has no dated rows");
 
-    const [rawTargets, currentDateTail] = await Promise.all([
+    const [rawTargets, latestDate] = await Promise.all([
       querySheet(SHEETS.target, `select B,C,D,E,F,G,H where A = ${targetPeriod}`)
         .catch((error) => {
           if (error instanceof Error && error.message.includes("NO_COLUMN: H")) {
@@ -149,14 +154,8 @@ Deno.serve(async (request: Request) => {
           }
           throw error;
         }),
-      querySheet(SHEETS.current, `select R offset ${Math.max(0, currentCount - 2_000)}`),
+      findLatestSalesDate(targetYear, targetMonth),
     ]);
-
-    const latestDate = currentDateTail
-      .map((row) => parseThaiDate(cell(row, 0)))
-      .filter((value): value is NonNullable<ReturnType<typeof parseThaiDate>> => value !== null)
-      .sort((a, b) => a.iso.localeCompare(b.iso))
-      .at(-1);
     if (!latestDate) throw new Error("Could not determine latest Current date");
     if (latestDate.year !== targetYear || latestDate.month !== targetMonth) {
       throw new Error(`Latest Current date ${latestDate.iso} does not match Target ${targetPeriod}`);
