@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { type FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type DashboardRow = {
   target_month: string;
@@ -28,6 +28,8 @@ type PageMode = "performance" | "teams";
 
 const SUPABASE_URL = "https://qoazkcserdyczckvhakt.supabase.co";
 const SUPABASE_KEY = "sb_publishable_U5bdVQgH0jZdb-phJoljdA_XHbY2oA2";
+const ACCESS_SESSION_KEY = "apple-watch-dashboard-access";
+const ACCESS_PASSWORD_HASH = "6831d544b3a20b725e6af0e75d383f3ce3c886778340a31e39830c2bfc4209fa";
 
 const demoRows: DashboardRow[] = [
   ["S001", "Studio 7 Central World", "ทีม RM 1", "ทีม AM 1", 135, 121, 109, 102],
@@ -204,7 +206,7 @@ function RmRankingCards({ rows, sourceRows }: { rows: DashboardRow[]; sourceRows
   );
 }
 
-export function DashboardClient() {
+function DashboardContent() {
   const dashboardRef = useRef<HTMLElement>(null);
   const [rows, setRows] = useState<DashboardRow[]>(demoRows);
   const [isDemo, setIsDemo] = useState(true);
@@ -437,6 +439,58 @@ export function DashboardClient() {
         <TeamRankingTable kind="am" rows={amRanking} sourceRows={filtered} />
       </section>}
       <footer>Apple Watch Dashboard · Target ล่าสุดเท่านั้น · อัปเดตจาก Google Sheet ผ่าน Supabase</footer>
+    </main>
+  );
+}
+
+async function hashPassword(value: string) {
+  const bytes = new TextEncoder().encode(value);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+export function DashboardClient() {
+  const [hasAccess, setHasAccess] = useState(() => typeof window !== "undefined" && sessionStorage.getItem(ACCESS_SESSION_KEY) === "granted");
+  const [password, setPassword] = useState("");
+  const [loginStatus, setLoginStatus] = useState<"idle" | "checking" | "error">("idle");
+
+  async function handleLogin(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setLoginStatus("checking");
+    const isValid = await hashPassword(password) === ACCESS_PASSWORD_HASH;
+    if (!isValid) {
+      setLoginStatus("error");
+      setPassword("");
+      return;
+    }
+    sessionStorage.setItem(ACCESS_SESSION_KEY, "granted");
+    setHasAccess(true);
+  }
+
+  if (hasAccess) return <DashboardContent />;
+
+  return (
+    <main className="login-page">
+      <section className="login-card" aria-labelledby="login-title">
+        <div className="login-watch" aria-hidden="true"><span /></div>
+        <h1 id="login-title">Apple Watch Performance</h1>
+        <p>ใส่รหัสผ่านเพื่อเข้าใช้งาน Dashboard</p>
+        <form onSubmit={handleLogin}>
+          <label htmlFor="dashboard-password">Password</label>
+          <input
+            id="dashboard-password"
+            type="password"
+            value={password}
+            onChange={(event) => { setPassword(event.target.value); setLoginStatus("idle"); }}
+            placeholder="Password"
+            autoComplete="current-password"
+            aria-invalid={loginStatus === "error"}
+            aria-describedby={loginStatus === "error" ? "login-error" : undefined}
+          />
+          {loginStatus === "error" ? <div className="login-error" id="login-error" role="alert">รหัสผ่านไม่ถูกต้อง กรุณาลองใหม่</div> : null}
+          <button type="submit" disabled={!password || loginStatus === "checking"}>{loginStatus === "checking" ? "กำลังตรวจสอบ…" : "เข้าสู่ Dashboard"}</button>
+        </form>
+      </section>
     </main>
   );
 }
