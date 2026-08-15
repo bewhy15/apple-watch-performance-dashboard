@@ -165,6 +165,45 @@ function TeamRankingTable({ kind, rows, sourceRows }: { kind: "channel" | "rm" |
   );
 }
 
+function RmRankingCards({ rows, sourceRows }: { rows: DashboardRow[]; sourceRows: DashboardRow[] }) {
+  return (
+    <section className="team-section rm-card-section" aria-labelledby="rm-card-ranking-title">
+      <div className="team-section-title">
+        <h2 id="rm-card-ranking-title">อันดับ RM</h2>
+        <span>{rows.length} RM · เรียงตาม %AC</span>
+      </div>
+      <div className="rm-card-grid">
+        {rows.map((row, index) => {
+          const attainment = row.target_attainment ?? 0;
+          const remaining = Math.max(row.target - row.current_sales, 0);
+          const amCount = new Set(sourceRows.filter((item) => item.rm === row.store_name).map((item) => item.am).filter(Boolean)).size;
+          return (
+            <article className={`rm-rank-card rm-rank-card-${index % 4 + 1}`} key={`rm-card-${row.store_id}`}>
+              <div className="rm-card-head">
+                <div><span className="rm-card-rank">{index + 1}</span><h3>{row.store_name}</h3></div>
+                <span>{amCount} AM</span>
+              </div>
+              <strong className="rm-card-ac">{percent.format(attainment)}</strong>
+              <div className="rm-card-progress" aria-label={`%AC ${percent.format(attainment)}`}><i style={{ width: `${Math.min(attainment * 100, 100)}%` }} /></div>
+              <div className="rm-card-metrics">
+                <div><span>Target</span><strong>{number.format(row.target)}</strong></div>
+                <div><span>Apple Watch</span><strong>{number.format(row.current_sales)}</strong></div>
+                <div><span>ต้องทำอีก</span><strong>{remaining ? number.format(remaining) : "ถึงเป้า"}</strong></div>
+                <div><span>Forecast</span><strong>{number.format(row.forecast ?? 0)}</strong></div>
+              </div>
+              <div className="rm-card-deltas">
+                <span><small>% Forecast</small><b>{row.forecast_attainment == null ? "—" : percent.format(row.forecast_attainment)}</b></span>
+                <span><small>MoM</small><Delta value={row.mom} /></span>
+                <span><small>YoY</small><Delta value={row.yoy} /></span>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 export function DashboardClient() {
   const dashboardRef = useRef<HTMLElement>(null);
   const [rows, setRows] = useState<DashboardRow[]>(demoRows);
@@ -394,7 +433,7 @@ export function DashboardClient() {
       </section></> : <section className="teams-report">
         <div className="teams-report-head"><div><p>RM &amp; AM PERFORMANCE</p><h1>ภาพรวม RM และ AM</h1></div><span>เรียงตาม %AC สูงสุด · ข้อมูลถึง {dateLabel(dataThroughDate)}</span></div>
         <TeamRankingTable kind="channel" rows={channelRanking} sourceRows={filtered} />
-        <TeamRankingTable kind="rm" rows={rmRanking} sourceRows={filtered} />
+        <RmRankingCards rows={rmRanking} sourceRows={filtered} />
         <TeamRankingTable kind="am" rows={amRanking} sourceRows={filtered} />
       </section>}
       <footer>Apple Watch Dashboard · Target ล่าสุดเท่านั้น · อัปเดตจาก Google Sheet ผ่าน Supabase</footer>
